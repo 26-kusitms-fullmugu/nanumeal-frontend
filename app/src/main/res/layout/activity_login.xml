@@ -76,7 +76,9 @@
             android:textSize="14sp"
             android:maxLength="20"
             android:maxLines="1"
-            android:inputType="text"
+            android:drawableStart="@drawable/icon_email_login"
+            android:paddingStart="10dp"
+            android:paddingEnd="12.17dp"
             android:textColorHint="@color/main_red" />
 
         <EditText
@@ -90,7 +92,11 @@
             android:maxLength="20"
             android:maxLines="1"
             android:inputType="textPassword"
+            android:drawableStart="@drawable/icon_pw_login"
+            android:paddingStart="10dp"
             android:textColorHint="@color/main_red" />
+
+
 
 
 
