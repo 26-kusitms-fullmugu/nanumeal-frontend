@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="sans-serif-medium"
         android:textColor="#DA3915"
         android:textSize="22dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,13 +72,11 @@
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:background="@drawable/btn_idpw_btn"
-            android:hint="  E-mail"
+            android:hint="E-mail"
             android:textSize="14sp"
             android:maxLength="20"
             android:maxLines="1"
-            android:drawableStart="@drawable/icon_email_login"
-            android:paddingStart="10dp"
-            android:paddingEnd="12.17dp"
+            android:inputType="text"
             android:textColorHint="@color/main_red" />
 
         <EditText
@@ -87,108 +85,36 @@
             android:layout_height="36dp"
             android:layout_marginTop="13dp"
             android:background="@drawable/btn_idpw_btn"
-            android:hint="  password"
+            android:hint="password"
             android:textSize="14sp"
             android:maxLength="20"
             android:maxLines="1"
             android:inputType="textPassword"
-            android:drawableStart="@drawable/icon_pw_login"
-            android:paddingStart="10dp"
             android:textColorHint="@color/main_red" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="89px"
-            android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/login_checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:outlineAmbientShadowColor="#C4C4C4"
-                android:shadowColor="#c4c4c4"
-                android:text="자동 로그인"
-                android:textColor="#C4C4C4"
-                android:textSize="12sp" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="14dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:background="#c4c4c4" />
 
-            <TextView
-                android:id="@+id/login_find_idpw_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="아이디 찾기"
-                android:textColor="#c4c4c4" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="14dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:background="#c4c4c4" />
 
-            <TextView
-                android:id="@+id/login_find_idpw_pw"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="비밀번호 찾기"
-                android:textColor="#c4c4c4" />
 
-        </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#F3F3F3"
-            android:layout_marginTop="264px" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="92px"
-            android:layout_gravity="center">
-
-            <ImageView
-                android:id="@+id/login_sns_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/login_sns_elipse"/>
-
-            <ImageView
-                android:id="@+id/login_sns_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:background="@drawable/login_sns_elipse"/>
-
-            <ImageView
-                android:id="@+id/login_sns_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:background="@drawable/login_sns_elipse"/>
-
-            <ImageView
-                android:id="@+id/login_sns_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:background="@drawable/login_sns_elipse"/>
-
-        </LinearLayout>
 
 
     </LinearLayout>
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
