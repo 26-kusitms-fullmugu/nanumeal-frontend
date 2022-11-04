@@ -25,16 +25,6 @@
         android:src="@drawable/background_white_login"
         app:layout_constraintTop_toBottomOf="@id/login_icon_nanumi"/>
 
-    <ImageView
-        android:id="@+id/login_background_red"
-        android:layout_width="match_parent"
-        android:layout_height="2000px"
-        android:layout_marginStart="50px"
-        android:layout_marginEnd="50px"
-        android:layout_marginTop="108px"
-        android:src="@drawable/background_red_login"
-        app:layout_constraintTop_toBottomOf="@id/login_icon_nanumi"/>
-
     <TextView
         android:id="@+id/login_login_tv"
         android:layout_width="wrap_content"
@@ -50,6 +40,7 @@
 
 
     <Button
+        android:id="@+id/login_login_btn"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:background="@drawable/btn_red_login"
@@ -57,25 +48,62 @@
         android:layout_marginTop="261dp"
         android:textColor="@color/white"
         android:textSize="14dp"
+        android:fontFamily="sans-serif"
         android:layout_marginStart="50px"
         android:layout_marginEnd="50px"
-        app:layout_constraintTop_toTopOf="@id/login_background_red"
+        app:layout_constraintTop_toTopOf="@id/login_background_white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <LinearLayout
+        android:id="@+id/login_idpw_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="85dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50px"
+        android:layout_marginEnd="50px"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/login_background_red">
+        app:layout_constraintTop_toTopOf="@id/login_background_white">
+
+        <EditText
+            android:id="@+id/Login_email_et"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/btn_idpw_btn"
+            android:hint="E-mail"
+            android:textSize="14sp"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textColorHint="@color/main_red" />
+
+        <EditText
+            android:id="@+id/Login_pw_et"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/btn_idpw_btn"
+            android:hint="password"
+            android:textSize="14sp"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            android:textColorHint="@color/main_red" />
+
+
+
+
+
+
+
+
+
 
 
     </LinearLayout>
+    
 
 
 
