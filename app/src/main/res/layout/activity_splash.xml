@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/elipse_white_splash"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="1455px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/icon_nanumi_splash"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="1560px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/splash_text"
         android:layout_marginStart="275dp"
-        android:layout_marginTop="580dp"
+        android:layout_marginTop="1780px"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
