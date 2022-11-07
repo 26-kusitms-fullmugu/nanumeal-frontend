@@ -25,19 +25,6 @@
         android:src="@drawable/background_white_login"
         app:layout_constraintTop_toBottomOf="@id/login_icon_nanumi"/>
 
-    <TextView
-        android:id="@+id/login_login_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="#DA3915"
-        android:textSize="22dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/login_background_white"/>
-
 
     <Button
         android:id="@+id/login_login_btn"
