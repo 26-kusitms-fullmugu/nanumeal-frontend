@@ -12,18 +12,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_nanumi"
-        android:layout_marginTop="93dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
         android:id="@+id/login_background_white"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="2000px"
-        android:layout_marginTop="108px"
+        android:layout_marginTop="217dp"
         android:src="@drawable/background_white_login"
-        app:layout_constraintTop_toBottomOf="@id/login_icon_nanumi"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -32,13 +34,13 @@
         android:layout_height="43dp"
         android:background="@drawable/btn_red_login"
         android:text="로그인"
-        android:layout_marginTop="261dp"
+        android:layout_marginTop="158dp"
         android:textColor="@color/white"
         android:textSize="14dp"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/roboto_bold"
         android:layout_marginStart="50px"
         android:layout_marginEnd="50px"
-        app:layout_constraintTop_toTopOf="@id/login_background_white"
+        app:layout_constraintTop_toTopOf="@id/login_idpw_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -46,18 +48,18 @@
         android:id="@+id/login_idpw_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="242dp"
         android:layout_marginStart="50px"
         android:layout_marginEnd="50px"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/login_background_white">
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/Login_email_et"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="108px"
             android:background="@drawable/btn_idpw_btn"
             android:hint="E-mail"
             android:textSize="14sp"
@@ -69,8 +71,8 @@
         <EditText
             android:id="@+id/Login_pw_et"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginTop="13dp"
+            android:layout_height="108px"
+            android:layout_marginTop="30px"
             android:background="@drawable/btn_idpw_btn"
             android:hint="password"
             android:textSize="14sp"
@@ -78,19 +80,59 @@
             android:maxLines="1"
             android:inputType="textPassword"
             android:textColorHint="@color/main_red" />
+        
+        
+        <LinearLayout
+            android:id="@+id/login_find_idpw_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30px"
+            android:orientation="horizontal">
+            
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자동 로그인"
+                android:textColor="#DCDCDC"
+                android:buttonTint="#DCDCDC"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="12sp" />
+            
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#DCDCDC"
+                android:layout_marginStart="10dp"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="아이디 찾기"
+                android:textSize="12sp"
+                android:textColor="#DCDCDC"
+                android:layout_marginEnd="10dp"/>
 
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#DCDCDC" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="비밀번호 찾기"
+                android:textSize="12sp"
+                android:textColor="#DCDCDC"
+                android:layout_marginEnd="10dp"/>
 
-
-
-
-
-
+        </LinearLayout>
 
 
     </LinearLayout>
-    
+
 
 
 
