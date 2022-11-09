@@ -86,7 +86,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/card_register_certify_select"
+            android:src="@drawable/card_nanumi_register_certify_select"
             android:layout_marginTop="66dp"/>
 
         <TextView
@@ -127,34 +127,29 @@
 
     </LinearLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/register_certify_select_btn_camera"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/btn_red_login"
+        android:src="@drawable/texticon_camera_nanumi_certify_select"
         android:layout_marginTop="662dp"
         android:layout_marginStart="23dp"
         android:layout_marginEnd="23dp"
-        android:text="카메라로 촬영하기"
-        android:textColor="@color/white"
-        android:textSize="13sp"
-        android:fontFamily="@font/roboto_regular"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+
+    <ImageButton
         android:id="@+id/register_certify_select_btn_album"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:src="@drawable/texticon_album_nanumi_certify_select"
         android:background="@drawable/btn_red_login"
         android:layout_marginTop="10dp"
         android:layout_marginStart="23dp"
         android:layout_marginEnd="23dp"
-        android:text="갤러리에서 선택하기"
-        android:textColor="@color/white"
-        android:textSize="13sp"
-        android:fontFamily="@font/roboto_regular"
         app:layout_constraintTop_toBottomOf="@id/register_certify_select_btn_camera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
