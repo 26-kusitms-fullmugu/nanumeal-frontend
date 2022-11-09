@@ -63,6 +63,75 @@
             android:textSize="22dp"
             android:textColor="@color/font_black"/>
 
+        <Button
+            android:id="@+id/register_select_nanumi_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_elipse_register_select"
+            android:layout_marginTop="30dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="나누미"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/font_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="나누미는 따뜻한 한 끼를 선물 받을 수 있습니다"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="나누밀과 함께 꿈을 키워 미래의 나누머가 되어주세요!"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <Button
+            android:id="@+id/register_select_nanumer_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_elipse_register_select"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="나누머"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/font_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="나누머는 나눔을 실천하는 사람입니다"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="따뜻한 한 끼 선물로 나누미의 하루를 채워주세요!"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_regular"/>
+
+
+
+
+
 
 
 

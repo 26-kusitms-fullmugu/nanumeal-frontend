@@ -12,4 +12,12 @@
     <color name="sub_red">#FFEFE7</color>
     <color name="font_black">#333333</color>
     <color name="font_gray">#939393</color>
+
+    <!-- camera Resource-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black_alpha">#90000000</color>
+    <color name="red">#dd1a22</color>
+    <color name="green_border">#00b5ae</color>
 </resources>
