@@ -1,5 +1,18 @@
 <resources>
-    <string name="app_name">nanumeal-frontend</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_choose">emailChoose</string>
+    <string-array name="spinner_array">
+        <item>
+            naver.com
+        </item>
+        <item>
+            gmail.com
+        </item>
+        <item>
+            nate.com
+        </item>
+        <item>
+            hanmail.net
+        </item>
+    </string-array>
+
 </resources>
