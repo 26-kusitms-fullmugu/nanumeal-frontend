@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginStart="13dp"
-            android:text="나누밀에선 오로지 닉네임으로 소통한다는 식의 안내사항 "
+            android:text="나누밀에선 오로지 닉네임으로만 활동할 수 있어요! "
             android:textSize="11sp"
             android:fontFamily="@font/roboto_regular"
             android:textColor="@color/font_gray"/>
