@@ -5,10 +5,72 @@
     android:layout_height="match_parent"
     tools:context=".MyNanumiFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_nanumi_red"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="40dp"/>
+
+            <LinearLayout
+                android:id="@+id/my_nanumi_certify_layout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/background_my_nanumi">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="서류인증이 완료되지 않았어요!"
+                    android:textSize="13sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/roboto_regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_red"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="15sp"
+                    android:text="인증하러 가기 "
+                    android:layout_marginTop="5dp"
+                    android:drawableRight="@drawable/vector_right_red"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
 
 </FrameLayout>

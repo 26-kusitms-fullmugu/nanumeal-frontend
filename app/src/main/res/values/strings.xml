@@ -14,5 +14,7 @@
             hanmail.net
         </item>
     </string-array>
+    
+    <string name="home_search_event">공지사항 &amp; 이벤트</string>
 
 </resources>
