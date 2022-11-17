@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class RegisterNanumiCertifySelectActivity extends AppCompatActivity {
+public class MessageScrollActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_nanumi_certify_select);
+        setContentView(R.layout.activity_message_scroll);
     }
 }

@@ -66,8 +66,11 @@
             android:layout_height="35dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/btn_nanumer_info_input"
-            android:hint="    이름"
+            android:hint="이름"
+            android:paddingStart="15dp"
             android:textSize="13sp"
+            android:maxLines="1"
+            android:inputType="text"
             android:textColor="@color/font_gray"
             android:fontFamily="@font/roboto_regular"/>
 
@@ -105,7 +108,10 @@
                 android:id="@+id/nanumer_info_input_nick_et"
                 android:layout_width="265dp"
                 android:layout_height="35dp"
-                android:hint="    닉네임"
+                android:hint="닉네임"
+                android:paddingStart="15dp"
+                android:maxLines="1"
+                android:inputType="text"
                 android:background="@drawable/btn_nanumer_info_input"
                 android:textSize="13sp"
                 android:fontFamily="@font/roboto_regular"
@@ -191,6 +197,9 @@
                 android:id="@+id/nanumer_info_Input2_age_et"
                 android:layout_width="50dp"
                 android:layout_height="35dp"
+                android:maxLength="3"
+                android:inputType="number"
+                android:maxLines="1"
                 android:background="@drawable/btn_nanumer_info_input"/>
 
             <TextView

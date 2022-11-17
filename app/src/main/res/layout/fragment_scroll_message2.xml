@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ScrollMessage2Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/top_bar_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/topbar_message_scroll"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="감사메세지"
+            android:layout_gravity="center"
+            android:textColor="@color/font_black"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_bold"/>
+        
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/scroll_message_icon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_message_scroll2"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="맛있어요"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="@color/font_black"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginStart="65dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/scroll_message_icon2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_message_scroll3"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:text="행복해요"
+                                android:textSize="13sp"
+                                android:textColor="@color/font_black"
+                                android:fontFamily="@font/roboto_bold"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginStart="65dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/scroll_message_icon3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_message_scroll3"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:text="따뜻해요"
+                                android:textSize="13sp"
+                                android:textColor="@color/font_black"
+                                android:fontFamily="@font/roboto_bold"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginStart="65dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/scroll_message_icon4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_message_scroll3"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:text="감사해요"
+                                android:textSize="13sp"
+                                android:textColor="@color/font_black"
+                                android:fontFamily="@font/roboto_bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginStart="65dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/scroll_message_icon5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_message_scroll3"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:text="최고예요"
+                                android:textSize="13sp"
+                                android:textColor="@color/font_black"
+                                android:fontFamily="@font/roboto_bold"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/scroll_message_status1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/elipse_red_status_bar_message_scroll"/>
+            
+            <ImageView
+                android:id="@+id/scroll_message_status2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4.37dp"
+                android:src="@drawable/elipse_gray_status_bar_message_scroll"/>
+
+            <ImageView
+                android:id="@+id/scroll_message_status3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4.37dp"
+                android:src="@drawable/elipse_gray_status_bar_message_scroll"/>
+
+            <ImageView
+                android:id="@+id/scroll_message_status4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4.37dp"
+                android:src="@drawable/elipse_gray_status_bar_message_scroll"/>
+
+            <ImageView
+                android:id="@+id/scroll_message_status5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4.37dp"
+                android:src="@drawable/elipse_gray_status_bar_message_scroll"/>
+            
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/scroll_message_et"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="135dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="top"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:background="@drawable/background_et_message_scroll2"
+            android:hint="나누머에게 받은 사랑을\n메시지를 통해 다시 돌려드려 보는 것은 어떨까요?\n나누머도 분명 좋아할거에요! (선택)"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColorHint="@color/font_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/font_gray"
+                android:fontFamily="@font/roboto_regular"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/font_gray"
+                android:fontFamily="@font/roboto_regular"
+                android:text="/50"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

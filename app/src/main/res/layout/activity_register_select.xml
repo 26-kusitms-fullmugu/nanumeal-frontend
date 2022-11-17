@@ -34,9 +34,11 @@
             android:layout_weight="1" />
 
         <TextView
+            android:id="@+id/register_select_next_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="다음"
+            android:visibility="invisible"
             android:fontFamily="@font/roboto_bold"
             android:textColor="@color/font_gray"
             android:textSize="13sp"/>

@@ -54,30 +54,19 @@
             android:fontFamily="@font/roboto_bold"/>
 
     </LinearLayout>
-    
-    <HorizontalScrollView
-        android:id="@+id/home_search_scrollview"
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_search_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        tools:listitem="@layout/item_search"
         android:layout_marginTop="15dp"
         android:layout_marginStart="15dp"
         app:layout_constraintTop_toBottomOf="@id/home_search_tv_layout"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"/>
 
-        <RelativeLayout
-            
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:listitem="@layout/item_search"
-                android:orientation="horizontal"/>
-        </RelativeLayout>
-
-    </HorizontalScrollView>
     
     <View
         android:id="@+id/home_search_view1"
@@ -85,7 +74,7 @@
         android:layout_height="8dp"
         android:layout_marginTop="25dp"
         android:background="#F9FAF9"
-        app:layout_constraintTop_toBottomOf="@id/home_search_scrollview"
+        app:layout_constraintTop_toBottomOf="@id/home_search_rv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
