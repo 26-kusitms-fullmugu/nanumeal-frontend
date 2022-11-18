@@ -10,8 +10,23 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Nanumealfrontend"
         tools:targetApi="31">
+        <activity
+            android:name=".NanumiCertifyAlbumCropActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SignUpFinishActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".MessageScrollActivity"
             android:exported="false">
@@ -75,13 +90,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".RegisterNanumiCertifySelectActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".RegisterNanumiCertifyActivity"
             android:exported="false">
@@ -123,6 +132,17 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="true"/>
     </application>
+
+    <!--camera, gallery -->
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 
 </manifest>

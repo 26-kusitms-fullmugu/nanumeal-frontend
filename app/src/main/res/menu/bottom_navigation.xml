@@ -19,6 +19,7 @@
         android:enabled="true"
         app:showAsAction="always"
         android:icon="@drawable/icon_my_off"
-        android:title="마이"/>
+        android:title="MY"/>
+
 
 </menu>

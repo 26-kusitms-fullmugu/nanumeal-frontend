@@ -39,10 +39,14 @@ public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
                     Intent view1 = new Intent(RegisterNanumiInfoInput1Activity.this, RegisterNanumiCertifyActivity.class);
                     startActivity(view1);
                     finish();
+                    break;
+
                 case R.id.infoInput_nanumer_next_tv:
-                    Intent view2 = new Intent(RegisterNanumiInfoInput1Activity.this, MainActivity.class);
+                    Intent view2 = new Intent(RegisterNanumiInfoInput1Activity.this, RegisterNanumiInfoInput2Activity.class);
                     startActivity(view2);
                     finish();
+                    break;
+
 //                    if(idEt.getText().toString().length() ==0 | pwEt.getText().toString().length() ==0 | pwEt1.getText().toString().length() ==0 | emailEt.getText().toString().length() ==0)
 //                    {
 //                        Toast.makeText(getApplicationContext(),"빈칸이 있어서는 안됩니다",Toast.LENGTH_SHORT).show();

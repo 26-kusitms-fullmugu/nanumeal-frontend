@@ -8,10 +8,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:visibility="gone">
+
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"/>
+
     </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
@@ -25,11 +27,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <SurfaceView
             android:id="@+id/surfaceView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerInParent="true" />
+
+
         <View
             android:id="@+id/topLayout"
             android:layout_width="match_parent"
@@ -65,6 +70,26 @@
             android:layout_toLeftOf="@+id/centerLayout"
             android:layout_below="@+id/topLayout"
             android:layout_above="@+id/bottomView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:text="꿈나무 카드 촬영"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/notosans_bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="어두운 배경에서 빛이 반사되지 않도록 촬영해주세요."
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_regular"
+            android:translationY="605dp"
+            android:gravity="center"/>
+
         <View
             android:id="@+id/bottomView"
             android:layout_width="match_parent"

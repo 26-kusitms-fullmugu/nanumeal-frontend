@@ -152,7 +152,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/nanumer_info_Input2_ex_tv2"
+        android:id="@+id/nanumer_info_Input2_tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="선택 사항"
@@ -177,7 +177,7 @@
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nanumer_info_Input2_ex_tv2">
+        app:layout_constraintTop_toBottomOf="@id/nanumer_info_Input2_tv2">
         
         <TextView
             android:layout_width="wrap_content"
