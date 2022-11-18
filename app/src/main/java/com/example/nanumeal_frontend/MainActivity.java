@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.item3:
                 {
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.main_layout,new MyFragment())
+                            .replace(R.id.main_layout,new MyNanumiFragment())
                             .commit();
                     return true;
                 }
