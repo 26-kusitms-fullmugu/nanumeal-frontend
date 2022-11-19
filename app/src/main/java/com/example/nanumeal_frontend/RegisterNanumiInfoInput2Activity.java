@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -13,7 +14,11 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 public class RegisterNanumiInfoInput2Activity extends AppCompatActivity {
+    private ArrayList<String> Input1Value;
+    String userId, userPwd, userEmail, userName, userNickName, userAge;
 
     class selectListener implements View.OnClickListener {
 
@@ -40,6 +45,16 @@ public class RegisterNanumiInfoInput2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_nanumi_info_input2);
+
+        Intent intent = getIntent();
+        Input1Value = (ArrayList<String>) intent.getSerializableExtra("Input1Value");
+        userId = Input1Value.get(0);
+        userPwd = Input1Value.get(1);
+        userEmail = Input1Value.get(2);
+        Log.d("userId", userId);
+        Log.d("userPwd", userPwd);
+        Log.d("userEmail", userEmail);
+
 
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);

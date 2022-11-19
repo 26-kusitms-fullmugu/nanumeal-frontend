@@ -42,10 +42,12 @@ public class RegisterSelectActivity extends AppCompatActivity {
                 case R.id.register_select_next_tv:
                     if(userValue.equals("nanumi")) { //나누미 버튼을 눌렀을 경우
                         Intent intent = new Intent(RegisterSelectActivity.this, RegisterNanumiCertifyActivity.class);
+                        intent.putExtra("userValue", userValue);
                         startActivity(intent);
                     }
                     else if (userValue.equals("nanumer")) {
                         Intent intent = new Intent(RegisterSelectActivity.this, RegisterNanumiInfoInput1Activity.class);
+                        intent.putExtra("userValue", userValue);
                         startActivity(intent);
                     }
                     break;
