@@ -16,13 +16,15 @@ public class RegisterRequest extends StringRequest {
     final static private String URL = "http://ftp 아이디.dothome.co.kr/Register.php";
     private Map<String, String> map;
 
-    public RegisterRequest(String UserId, String UserPwd, String UserName, Response.Listener<String> listener) {
+    public RegisterRequest(String UserId, String UserPwd, String UserName, String UserNickName, String UserAge, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
         map.put("UserId", UserId);
         map.put("UserPwd", UserPwd);
         map.put("UserName", UserName);
+        map.put("UserNickName", UserNickName);
+        map.put("UserAge", UserAge);
 
     }
 

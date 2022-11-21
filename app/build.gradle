@@ -41,7 +41,11 @@ dependencies {
     //사용자 권한(카메라, 갤러리)
     implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'
 
+    //volley 통신
     implementation 'com.android.volley:volley:1.2.1'
+
+    //recycler View
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
 
 
 }

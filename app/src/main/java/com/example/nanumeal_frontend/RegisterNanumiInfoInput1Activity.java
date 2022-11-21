@@ -70,9 +70,9 @@ public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
             public void onResponse(String response) {
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
-                    boolean successs = jsonResponse.getBoolean("success");
+                    boolean success = jsonResponse.getBoolean("success");
 
-                    if(successs) {
+                    if(success) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(RegisterNanumiInfoInput1Activity.this);
                         dialog = builder.setMessage("사용할 수 있는 아이디입니다.").setPositiveButton("확인", null).create();
                         dialog.show();
@@ -148,6 +148,8 @@ public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
                         Log.d("userPwd", userPwd);
                         Input1Value.add(userEmail); //순서대로 id - pwd - email
                         Log.d("userEmail", userEmail);
+                        Input1Value.add(userValue); ////순서대로 id - pwd - email - userValue
+                        Log.d("userValue", userValue);
                         Intent view2 = new Intent(RegisterNanumiInfoInput1Activity.this, RegisterNanumiInfoInput2Activity.class);
                         view2.putExtra("Input1Value", Input1Value); //ArrayList Intent 넘기기
                         startActivity(view2);

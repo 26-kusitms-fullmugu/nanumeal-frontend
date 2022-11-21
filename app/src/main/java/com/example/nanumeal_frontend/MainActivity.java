@@ -22,11 +22,16 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavi;
     private LinearLayout mainLayout;
+    String userValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        userValue = intent.getStringExtra("userValue");
+        Log.d("userValue", userValue);
 
         init();
         settingListener();
@@ -65,10 +70,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 case R.id.item3:
                 {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.main_layout,new MyNanumiFragment())
-                            .commit();
-                    return true;
+                    if(userValue.equals("nanumer")) { //userType == nanumer
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.main_layout,new MyNanumerFragment())
+                                .commit();
+                        return true;
+                    }
+                    else if(userValue.equals("nanumi")) { //userType == nanumi
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.main_layout,new MyNanumiFragment())
+                                .commit();
+                        return true;
+                    }
                 }
             }
             return false;

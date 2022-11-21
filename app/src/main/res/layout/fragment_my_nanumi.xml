@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/nanumi_my_scroll"
     tools:context=".MyNanumiFragment">
 
     <RelativeLayout
@@ -42,6 +43,7 @@
                     android:fontFamily="@font/roboto_regular"/>
 
                 <TextView
+                    android:id="@+id/nanumi_my_certify_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/main_red"
@@ -205,20 +207,46 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="공지사항 이벤트"
+                android:text="@string/home_search_event"
                 android:textSize="15sp"
                 android:fontFamily="@font/roboto_bold"
                 android:textColor="@color/font_black"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="33dp"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/nanumi_my_event_rv"
+            <HorizontalScrollView
+                android:id="@+id/nanumi_my_event_hsv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:layout_marginStart="15dp"
-                android:orientation="horizontal"/>
+                android:layout_marginStart="15dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/banner_my_nanumer"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/banner_my_nanumer"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/banner_my_nanumer"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
 
             <View
                 android:layout_width="match_parent"

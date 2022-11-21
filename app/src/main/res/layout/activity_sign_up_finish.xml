@@ -44,6 +44,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/sign_up_finish_btn"
         android:layout_width="match_parent"
         android:layout_height="51dp"
         android:background="@drawable/btn_red_login"

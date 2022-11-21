@@ -105,7 +105,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/nanumer_info_input_nick_et"
+                android:id="@+id/nanumer_info_input2_nick_et"
                 android:layout_width="265dp"
                 android:layout_height="35dp"
                 android:hint="닉네임"
@@ -199,6 +199,7 @@
                 android:layout_height="35dp"
                 android:maxLength="3"
                 android:inputType="number"
+                android:paddingStart="10dp"
                 android:maxLines="1"
                 android:background="@drawable/btn_nanumer_info_input"/>
 
