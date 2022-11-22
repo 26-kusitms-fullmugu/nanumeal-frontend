@@ -12,18 +12,6 @@
     app:layout_constraintEnd_toEndOf="parent"
     android:layout_marginBottom="15dp">
 
-    <ImageView
-        android:id="@+id/message_icon_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_message_profile"
-        android:layout_gravity="center_vertical"/>
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,8 +70,19 @@
                 android:fontFamily="@font/roboto_regular"/>
 
         </LinearLayout>
-
     </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/message_icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_happy_small"
+        android:layout_gravity="center_vertical"/>
 
 
 </LinearLayout>
