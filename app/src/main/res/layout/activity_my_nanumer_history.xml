@@ -238,6 +238,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/my_nanumer_history_again_donate"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:text="재후원하기"
@@ -304,7 +305,7 @@
                         android:layout_marginTop="15dp"
                         android:orientation="horizontal">
 
-                        <ImageView
+                        <com.example.nanumeal_frontend.RoundImageView
                             android:id="@+id/my_nanumer_history_store_iv2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
@@ -443,7 +444,7 @@
                         android:layout_marginTop="15dp"
                         android:orientation="horizontal">
 
-                        <ImageView
+                        <com.example.nanumeal_frontend.RoundImageView
                             android:id="@+id/my_nanumer_history_store_iv3"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
@@ -582,7 +583,7 @@
                         android:layout_marginTop="15dp"
                         android:orientation="horizontal">
 
-                        <ImageView
+                        <com.example.nanumeal_frontend.RoundImageView
                             android:id="@+id/my_nanumer_history_store_iv4"
                             android:layout_width="70dp"
                             android:layout_height="70dp"

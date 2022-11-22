@@ -47,5 +47,8 @@ dependencies {
     //recycler View
     implementation "androidx.recyclerview:recyclerview:1.1.0"
 
+    // Kakao Login
+    implementation 'com.kakao.sdk:v2-user:2.10.0'
+
 
 }

@@ -20,6 +20,10 @@ public class MyNanumerFragment extends Fragment {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.my_nanumer_arrow:
+                    Intent intent = new Intent(getActivity(), MyNanumerHistoryActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+
             }
 
         }
@@ -41,7 +45,11 @@ public class MyNanumerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_my_nanumer, container, false);
+
+        clickListener onClickListener = new clickListener();
         ImageView arrow_btn = (ImageView) rootView.findViewById(R.id.my_nanumer_arrow);
+        arrow_btn.setOnClickListener(onClickListener);
+
 
 
         return rootView;
