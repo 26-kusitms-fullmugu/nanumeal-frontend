@@ -25,7 +25,9 @@ public class RegisterSelectActivity extends AppCompatActivity {
             switch (v.getId()) {
                 case R.id.register_select_nanumi_icon:
                     nanumer_icon.setSelected(false);
+                    nanumer_icon.setBackgroundResource(R.drawable.icon_nanumer_blur);
                     nanumi_icon.setSelected(!nanumi_icon.isSelected());
+                    nanumi_icon.setBackgroundResource(R.drawable.icon_nanumi_select_checked);
                     nextTv.setVisibility(View.VISIBLE); //다음 버튼 클릭 가능
                     userValue = "nanumi";
                     Log.d("userValue", userValue);
@@ -33,7 +35,9 @@ public class RegisterSelectActivity extends AppCompatActivity {
 
                 case R.id.register_select_nanumer_icon:
                     nanumi_icon.setSelected(false);
+                    nanumi_icon.setBackgroundResource(R.drawable.icon_nanumi_blur);
                     nanumer_icon.setSelected(!nanumer_icon.isSelected());
+                    nanumer_icon.setBackgroundResource(R.drawable.icon_nanumer_black);
                     nextTv.setVisibility(View.VISIBLE); //다음 버튼 클릭 가능
                     userValue = "nanumer";
                     Log.d("userValue", userValue);

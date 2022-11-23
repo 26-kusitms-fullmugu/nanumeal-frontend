@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/nanumi_my_scroll"
-    tools:context=".MyNanumiFragment">
+    tools:context=".MyNanumiCertifyFragment">
 
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nanumi_certify_my_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -257,7 +256,7 @@
                 <TextView
                     android:id="@+id/nanumi_my_service_tv2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:text="환불정책"
                     android:textSize="13sp"
                     android:textColor="@color/font_black"
@@ -268,7 +267,5 @@
             </LinearLayout>
 
         </LinearLayout>
-
-    </RelativeLayout>
-
-</ScrollView>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

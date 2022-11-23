@@ -14,13 +14,14 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/background_map_message_scroll"/>
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/message_scroll_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/message_scroll_linear2"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -37,6 +38,7 @@
         android:orientation="horizontal">
         
         <Button
+            android:id="@+id/message_scroll_btn1"
             android:layout_width="100dp"
             android:layout_height="41dp"
             android:background="@drawable/btn_message_scroll_gray"
@@ -47,6 +49,7 @@
             android:text="나중에"/>
         
         <Button
+            android:id="@+id/message_scroll_btn2"
             android:layout_width="match_parent"
             android:layout_height="41dp"
             android:background="@drawable/btn_message_scroll_red"
@@ -54,6 +57,19 @@
             android:textColor="@color/white"
             android:textSize="13sp"
             android:fontFamily="@font/roboto_bold"/>
+
+        <Button
+            android:id="@+id/message_scroll_btn3"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="@drawable/btn_message_scroll_red"
+            android:text="감사메시지 남기기"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_bold"/>
+
+
 
         
     </LinearLayout>

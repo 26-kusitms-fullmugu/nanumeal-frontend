@@ -2,6 +2,9 @@ package com.example.nanumeal_frontend;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -34,7 +37,13 @@ public class MainActivity extends AppCompatActivity {
         Log.d("userValue", userValue);
 
         init();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Fragment initFragment = new DonationFragment();
+        fragmentManager.beginTransaction().replace(R.id.main_layout, initFragment).commit();
+
         settingListener();
+
 
 
     }

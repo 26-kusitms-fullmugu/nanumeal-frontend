@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyNanumiFragment">
+    tools:context=".MyNanumerFragment">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nanumer_my_scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -268,7 +268,7 @@
                 <TextView
                     android:id="@+id/nanumi_my_service_tv2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:text="환불정책"
                     android:textSize="13sp"
                     android:textColor="@color/font_black"

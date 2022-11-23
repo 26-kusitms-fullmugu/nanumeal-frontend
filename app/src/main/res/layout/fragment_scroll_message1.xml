@@ -3,7 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="700dp"
+    android:layout_marginTop="50dp"
+    android:background="#ffffff"
     tools:context=".ScrollMessage1Fragment">
 
     <LinearLayout
@@ -15,6 +17,13 @@
         android:layout_marginBottom="41dp"
         android:orientation="vertical"
         android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/topbar_message_scroll"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
 
         <ImageView
             android:id="@+id/message_scroll_icon1"
@@ -32,6 +41,7 @@
             android:textSize="20sp"/>
 
         <TextView
+            android:id="@+id/scroll_message1_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
