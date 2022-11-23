@@ -71,6 +71,18 @@
             android:layout_below="@+id/topLayout"
             android:layout_above="@+id/bottomView"/>
 
+        <Button
+            android:id="@+id/certify_camera_btn"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_red_login"
+            android:text="촬영하기"
+            android:fontFamily="@font/notosans_bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:translationX="118dp"
+            android:translationY="535dp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="250dp"

@@ -20,7 +20,7 @@
             android:id="@+id/message_scroll_icon1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_message_scroll1"/>
+            android:src="@drawable/icon_scroll_message1"/>
 
         <TextView
             android:layout_width="wrap_content"

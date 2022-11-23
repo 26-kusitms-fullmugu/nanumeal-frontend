@@ -82,6 +82,12 @@ public class MainActivity extends AppCompatActivity {
                                 .commit();
                         return true;
                     }
+                    else if(userValue.equals("nanumi_certify")) { //userType == nanumi
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.main_layout,new MyNanumiCertifyFragment())
+                                .commit();
+                        return true;
+                    }
                 }
             }
             return false;

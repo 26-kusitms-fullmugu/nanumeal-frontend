@@ -56,7 +56,7 @@
                             android:id="@+id/scroll_message_icon1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/icon_message_scroll2"/>
+                            android:src="@drawable/icon_yummy_big" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
                                 android:id="@+id/scroll_message_icon2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/icon_message_scroll3"/>
+                                android:src="@drawable/icon_happy_middle"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -112,7 +112,7 @@
                                 android:id="@+id/scroll_message_icon3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/icon_message_scroll3"/>
+                                android:src="@drawable/icon_warmup_middle"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -136,7 +136,7 @@
                                 android:id="@+id/scroll_message_icon4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/icon_message_scroll3"/>
+                                android:src="@drawable/icon_thankyou_middle"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -159,13 +159,13 @@
                                 android:id="@+id/scroll_message_icon5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/icon_message_scroll3"/>
+                                android:src="@drawable/icon_fighting_middle"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="30dp"
-                                android:text="최고예요"
+                                android:text="힘이나요"
                                 android:textSize="13sp"
                                 android:textColor="@color/font_black"
                                 android:fontFamily="@font/roboto_bold"/>

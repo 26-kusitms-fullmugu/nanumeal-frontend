@@ -67,6 +67,7 @@
             android:textSize="14sp"
             android:maxLength="20"
             android:maxLines="1"
+            android:paddingStart="5dp"
             android:inputType="text"
             android:textColorHint="#DCDCDC" />
 
@@ -82,6 +83,7 @@
             android:textSize="14sp"
             android:maxLength="20"
             android:maxLines="1"
+            android:paddingStart="5dp"
             android:inputType="textPassword"
             android:textColorHint="#DCDCDC" />
 
@@ -291,6 +293,7 @@
             android:layout_height="wrap_content"
             android:text="회원가입"
             android:textSize="13sp"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/roboto_bold"
             android:textColor="@color/main_red"/>
 

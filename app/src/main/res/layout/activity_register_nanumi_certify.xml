@@ -84,6 +84,7 @@
             android:text="승인되기까지 최대 n일이 소요될 수 있습니다."/>
 
         <ImageView
+            android:id="@+id/register_nanumi_imageview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/card_nanumi_register_certify_select"

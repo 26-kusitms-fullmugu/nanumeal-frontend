@@ -183,6 +183,7 @@ public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
 
         Intent intent = getIntent();
         userValue = intent.getStringExtra("userValue");
+        Log.d("userValue", userValue);
 
 
         Window window = getWindow();
