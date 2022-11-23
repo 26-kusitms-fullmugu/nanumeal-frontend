@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -157,14 +158,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
+<!--                 Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
                 <data android:host="oauth"
                     android:scheme="kakaod4f59408dc6da548bfe2a267706b83e6" />
             </intent-filter>
         </activity>
 
         <uses-library
-            android:name="org.apache.http.legacy"
+            android:name="org.apache.https.legacy"
             android:required="false"/>
     </application>
 

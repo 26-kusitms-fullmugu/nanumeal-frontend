@@ -31,6 +31,7 @@
             android:fontFamily="@font/roboto_bold"/>
         
         <HorizontalScrollView
+            android:id="@+id/scroll_message2_hv"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_gravity="center"
@@ -155,6 +156,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:layout_marginStart="65dp"
+                            android:layout_marginEnd="200dp"
                             android:orientation="vertical">
 
                             <ImageView
@@ -228,7 +230,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/scroll_message_et"
+            android:id="@+id/scroll_message2_et"
             android:layout_width="match_parent"
             android:layout_gravity="center"
             android:layout_height="135dp"
@@ -238,6 +240,7 @@
             android:gravity="top"
             android:paddingStart="20dp"
             android:paddingTop="20dp"
+            android:maxLength="100"
             android:background="@drawable/background_et_message_scroll2"
             android:hint="나누머에게 받은 사랑을\n메시지를 통해 다시 돌려드려 보는 것은 어떨까요?\n나누머도 분명 좋아할거에요! (선택)"
             android:textSize="13sp"
@@ -253,6 +256,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/scroll_message2_length"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
@@ -266,7 +270,7 @@
                 android:textSize="13sp"
                 android:textColor="@color/font_gray"
                 android:fontFamily="@font/roboto_regular"
-                android:text="/50"/>
+                android:text="/100"/>
 
         </LinearLayout>
 

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class HomeFragment extends Fragment {
@@ -47,6 +48,8 @@ public class HomeFragment extends Fragment {
         clickListener clickListener = new clickListener();
         ImageView BtnGps = (ImageView) rootView.findViewById(R.id.btn_gps);
         BtnGps.setOnClickListener(clickListener);
+
+
 
         return rootView;
 

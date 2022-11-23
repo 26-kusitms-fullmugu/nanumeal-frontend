@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class RegisterSelectActivity extends AppCompatActivity {
+    int KakaoCertify = 0;
+
 
     class selectListener implements View.OnClickListener { //나누미&나누머 색상 변경 리스너
         TextView nextTv = (TextView) findViewById(R.id.register_select_next_tv);
@@ -29,7 +31,11 @@ public class RegisterSelectActivity extends AppCompatActivity {
                     nanumi_icon.setSelected(!nanumi_icon.isSelected());
                     nanumi_icon.setBackgroundResource(R.drawable.icon_nanumi_select_checked);
                     nextTv.setVisibility(View.VISIBLE); //다음 버튼 클릭 가능
-                    userValue = "nanumi";
+                    if(KakaoCertify == 1) {
+                        userValue = "nanumi_certify";
+                    }else {
+                        userValue = "nanumi";
+                    }
                     Log.d("userValue", userValue);
                     break;
 
@@ -44,15 +50,23 @@ public class RegisterSelectActivity extends AppCompatActivity {
                     break;
 
                 case R.id.register_select_next_tv:
-                    if(userValue.equals("nanumi")) { //나누미 버튼을 눌렀을 경우
-                        Intent intent = new Intent(RegisterSelectActivity.this, RegisterNanumiCertifyActivity.class);
-                        intent.putExtra("userValue", userValue);
-                        startActivity(intent);
+                    if(KakaoCertify == 1) {
+                            Intent intent = new Intent(RegisterSelectActivity.this, SignUpFinishActivity.class);
+                            intent.putExtra("userValue", userValue);
+                            startActivity(intent);
+                            finish();
                     }
-                    else if (userValue.equals("nanumer")) {
-                        Intent intent = new Intent(RegisterSelectActivity.this, RegisterNanumiInfoInput1Activity.class);
-                        intent.putExtra("userValue", userValue);
-                        startActivity(intent);
+                    else {
+                        if(userValue.equals("nanumi")) { //나누미 버튼을 눌렀을 경우
+                            Intent intent = new Intent(RegisterSelectActivity.this, RegisterNanumiCertifyActivity.class);
+                            intent.putExtra("userValue", userValue);
+                            startActivity(intent);
+                        }
+                        else if (userValue.equals("nanumer")) {
+                            Intent intent = new Intent(RegisterSelectActivity.this, RegisterNanumiInfoInput1Activity.class);
+                            intent.putExtra("userValue", userValue);
+                            startActivity(intent);
+                        }
                     }
                     break;
             }
@@ -63,6 +77,11 @@ public class RegisterSelectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_select);
+
+        Intent intent = getIntent();
+        KakaoCertify = intent.getIntExtra("KAKAO_CERTIFY", 0);
+        Log.d("KakaoCertify", String.valueOf(KakaoCertify));
+
 
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -78,6 +97,11 @@ public class RegisterSelectActivity extends AppCompatActivity {
 
         TextView nextTv = (TextView) findViewById(R.id.register_select_next_tv);
         nextTv.setOnClickListener(onClickListener); //다음 버튼-클릭리스너
+
+        if(KakaoCertify == 1) { //카카오 회원가입시 선택시 바로 회원가입
+            nextTv.setText("회원가입 완료");
+            nextTv.setTextColor(Color.parseColor("#DA3915"));
+        }
 
     }
 }
