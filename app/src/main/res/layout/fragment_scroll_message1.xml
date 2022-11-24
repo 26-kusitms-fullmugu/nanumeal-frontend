@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    android:layout_marginTop="50dp"
+    android:background="#ffffff"
+    tools:context=".ScrollMessage1Fragment">
+
+    <LinearLayout
+        android:id="@+id/message_scroll_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="41dp"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/topbar_message_scroll"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/message_scroll_icon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_scroll_message1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="나누밀과 함께한 한끼는"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/scroll_message1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="따뜻했나요?"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="나누머와 나누미에게 감사메시지를 지금 보내보세요!"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/font_gray"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

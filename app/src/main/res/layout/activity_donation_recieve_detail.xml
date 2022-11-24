@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DonationRecieveDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="691dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:overScrollMode="never" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/donation_recieve_bg"
+                    android:adjustViewBounds="true" >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="153dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/store_profile_image"
+                            android:adjustViewBounds="true" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="417.15dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp">
+
+                        <EditText
+                            android:id="@+id/Login_email_et"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/donation_enter_amount_btn"
+                            android:hint="    금액 직접 입력하기"
+                            android:textSize="14sp"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            android:textColorHint="#939393" />
+
+                    </FrameLayout>
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="470dp"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/eight_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/eight_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"/>
+
+                                        <ImageView
+                                            android:id="@+id/five_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/five_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"/>
+
+                                        <ImageView
+                                            android:id="@+id/one_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/one_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"/>
+
+                                        <ImageView
+                                            android:id="@+id/three_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/three_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"/>
+
+                                        <ImageView
+                                            android:id="@+id/five_plus_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/five_plus_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/eight_fill_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/eight_fill_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"
+                                            android:visibility="invisible"/>
+
+                                        <ImageView
+                                            android:id="@+id/five_fill_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/five_fill_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"
+                                            android:visibility="invisible"/>
+
+                                        <ImageView
+                                            android:id="@+id/one_fill_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/one_fill_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"
+                                            android:visibility="invisible"/>
+
+                                        <ImageView
+                                            android:id="@+id/three_fill_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/three_fill_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"
+                                            android:visibility="invisible"/>
+
+                                        <ImageView
+                                            android:id="@+id/five_plus_fill_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/five_plus_fill_btn"
+                                            android:adjustViewBounds="true"
+                                            android:layout_marginRight="10dp"
+                                            android:visibility="invisible"/>
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+
+                    <FrameLayout
+                        android:paddingHorizontal="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="558dp"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:id="@+id/card_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/card_btn"
+                            android:adjustViewBounds="true"
+                            android:layout_marginRight="10dp"/>
+
+                        <ImageView
+                            android:id="@+id/card_fill_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/card_fill_btn"
+                            android:adjustViewBounds="true"
+                            android:layout_marginRight="10dp"
+                            android:visibility="invisible"/>
+
+                        <ImageView
+                            android:id="@+id/account_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/account_btn"
+                            android:adjustViewBounds="true"
+                            android:layout_marginLeft="170dp"
+                            android:visibility="visible"/>
+
+                        <ImageView
+                            android:id="@+id/account_fill_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/account_fill_btn"
+                            android:adjustViewBounds="true"
+                            android:layout_marginLeft="170dp"
+                            android:visibility="invisible"/>
+
+                        <ImageView
+                            android:id="@+id/naverpay_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/naverpay_btn"
+                            android:adjustViewBounds="true"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="visible"/>
+
+                        <ImageView
+                            android:id="@+id/naverpay_fill_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/naverpay_fill_btn"
+                            android:adjustViewBounds="true"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="invisible"/>
+
+                        <ImageView
+                            android:id="@+id/kakaopay_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/kakaopay_btn"
+                            android:adjustViewBounds="true"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginLeft="170dp"
+                            android:visibility="visible"/>
+
+                        <ImageView
+                            android:id="@+id/kakaopay_fill_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/kakaopay_fill_btn"
+                            android:adjustViewBounds="true"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginLeft="170dp"
+                            android:visibility="invisible"/>
+
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/support_bottom_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/support_bottom_bar" />
+
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

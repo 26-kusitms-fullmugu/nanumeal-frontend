@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/code_info"
+        android:textSize="20sp"
+        android:layout_marginLeft="16dp"
+        android:text="Scan QR"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+
+        <View
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_alpha"
+            android:layout_above="@+id/centerLayout"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_alpha"
+            android:layout_toRightOf="@+id/centerLayout"
+            android:layout_below="@+id/topLayout"
+            android:layout_above="@+id/bottomView"/>
+
+        <RelativeLayout
+            android:id="@+id/centerLayout"
+            android:layout_width="288dp"
+            android:layout_height="182dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/surfaceview_rounded_corner">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black_alpha" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_alpha"
+            android:layout_toLeftOf="@+id/centerLayout"
+            android:layout_below="@+id/topLayout"
+            android:layout_above="@+id/bottomView"/>
+
+        <Button
+            android:id="@+id/certify_camera_btn"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_red_login"
+            android:text="촬영하기"
+            android:fontFamily="@font/notosans_bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:translationX="118dp"
+            android:translationY="535dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:text="꿈나무 카드 촬영"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/notosans_bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="어두운 배경에서 빛이 반사되지 않도록 촬영해주세요."
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_regular"
+            android:translationY="605dp"
+            android:gravity="center"/>
+
+        <View
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_alpha"
+            android:layout_below="@+id/centerLayout"/>
+    </RelativeLayout>
+</LinearLayout>

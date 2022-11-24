@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterSelectActivity">
+
+    <!-- 상단 바 -->
+    <LinearLayout
+        android:id="@+id/infoInput_nanumer_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+<!--        <TextView-->
+<!--            android:id="@+id/infoInput_nanumer_ex_tv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="이전"-->
+<!--            android:fontFamily="@font/roboto_bold"-->
+<!--            android:textColor="#DCDCDC"-->
+<!--            android:textSize="13sp"/>-->
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/register_select_next_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다음"
+            android:visibility="invisible"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/font_gray"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="36.5dp"
+        android:layout_marginEnd="36.5dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나누미와 나누머"
+            android:fontFamily="@font/notosans_bold"
+            android:textSize="22dp"
+            android:textColor="@color/font_black"/>
+
+        <Button
+            android:id="@+id/register_select_nanumi_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_nanumi_blur"
+            android:layout_marginTop="30dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="나누미"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/font_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="나누미는 따뜻한 한 끼를 선물 받을 수 있습니다"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="나누밀과 함께 꿈을 키워 미래의 나누머가 되어주세요!"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <Button
+            android:id="@+id/register_select_nanumer_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_nanumer_blur"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="나누머"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/font_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="나누머는 나눔을 실천하는 사람입니다"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="따뜻한 한 끼 선물로 나누미의 하루를 채워주세요!"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/roboto_regular"/>
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

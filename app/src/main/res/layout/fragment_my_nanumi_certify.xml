@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyNanumiCertifyFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nanumi_certify_my_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/my_icon_nanumi_top"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="40dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/nanumi_my_profile_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_profile"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="13.5dp"
+                    android:layout_marginTop="13.5dp"
+                    android:layout_marginBottom="13.5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나누미"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="13sp"
+                        android:textColor="@color/font_gray"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/nanumi_my_nickname_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="김민근"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="님"
+                            android:textColor="#000000"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/nanumi_my_email_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="nanumeal@naver.com"
+                        android:textSize="13sp"
+                        android:textColor="@color/font_gray"
+                        android:fontFamily="@font/roboto_regular"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/nanumi_my_setting_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_my_setting"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#F9FAF9"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이용내역"
+                android:textSize="15sp"
+                android:textColor="@color/font_black"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/layout_background_my_nanumi_using"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nanumi_my_using_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12곳"
+                    android:textSize="20sp"
+                    android:textColor="@color/main_red"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="35dp"/>
+
+                <TextView
+                    android:id="@+id/nanumi_my_message_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8개"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginStart="158dp"
+                    android:layout_marginTop="35dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#F9FAF9"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_search_event"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/font_black"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="33dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/nanumi_my_event_hsv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/banner_my_nanumer"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/banner_my_nanumer"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/banner_my_nanumer"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#F9FAF9"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="33dp"
+                android:text="서비스"
+                android:textColor="@color/font_black"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nanumi_my_service_tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="이용약관"
+                    android:textSize="13sp"
+                    android:textColor="@color/font_black"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"/>
+
+                <TextView
+                    android:id="@+id/nanumi_my_service_tv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:text="환불정책"
+                    android:textSize="13sp"
+                    android:textColor="@color/font_black"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

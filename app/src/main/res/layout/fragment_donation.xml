@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DonationFragment" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="72dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="60dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/icon_marker"
+                        android:adjustViewBounds="true"/>
+
+                    <TextView
+                        android:id="@+id/locationTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="중구 청계천로 100"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#333333"
+                        android:textAlignment="textEnd"
+                        android:layout_marginTop="3dp"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/icon_arrow"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="3dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/icon_search"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="205dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/banner_img">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TabHost
+                        android:id="@+id/tabHost1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
+                            <TabWidget
+                                android:id="@android:id/tabs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
+                            <FrameLayout
+                                android:id="@android:id/tabcontent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <!-- 첫 번째 페이지. content1 -->
+                                <LinearLayout
+                                    android:id="@+id/content1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/recycler"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingHorizontal="10dp"
+                                        android:clipToPadding="false"
+                                        android:scrollbars="none"
+                                        android:overScrollMode="never"/>
+
+                                </LinearLayout>
+
+                                <!-- 두 번째 페이지. content2 -->
+                                <LinearLayout
+                                    android:id="@+id/content2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/recycler2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingHorizontal="10dp"
+                                        android:clipToPadding="false"
+                                        android:scrollbars="none"
+                                        android:overScrollMode="never"/>
+
+                                </LinearLayout>
+
+                                <!-- 세 번째 페이지. content3 -->
+                                <LinearLayout
+                                    android:id="@+id/content3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/recycler3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingHorizontal="10dp"
+                                        android:clipToPadding="false"
+                                        android:scrollbars="none"
+                                        android:overScrollMode="never"/>
+
+                                </LinearLayout>
+                            </FrameLayout>
+                        </LinearLayout>
+                    </TabHost>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

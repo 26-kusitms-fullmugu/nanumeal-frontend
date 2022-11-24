@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item1"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/icon_donation_off"
+        android:title="후원"/>
+    <item
+        android:id="@+id/item2"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/icon_home_on"
+        android:title="홈"/>
+    <item
+        android:id="@+id/item3"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/icon_my_off"
+        android:title="MY"/>
+
+
+</menu>

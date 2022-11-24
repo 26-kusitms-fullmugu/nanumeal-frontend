@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingEnd="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/background_message_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_message_top"/>
+
+
+                <TextView
+                    android:id="@+id/message_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3일전"
+                    android:textColor="#DCDCDC"
+                    android:layout_marginStart="170dp"
+                    android:fontFamily="@font/notosans_bold"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/message_icon_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="행복해요"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/notosans_bold"
+                android:textSize="15sp"
+                android:textColor="@color/main_red"/>
+
+            <TextView
+                android:id="@+id/message_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="정말 맛있습니다 감사합니다"
+                android:textColor="@color/font_gray"
+                android:fontFamily="@font/roboto_regular"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/message_icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_happy_small"
+        android:layout_gravity="center_vertical"/>
+
+
+</LinearLayout>

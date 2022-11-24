@@ -3,14 +3,13 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven {
+            url 'https://naver.jfrog.io/artifactory/maven/'
+        }
+
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/'}
     }
 }
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+
 rootProject.name = "nanumeal-frontend"
 include ':app'

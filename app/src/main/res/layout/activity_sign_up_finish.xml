@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_red"
+    tools:context=".SignUpFinishActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:layout_marginTop="87dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_sign_up_nanumi"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나누밀과 함께\n나눔이 배부를 때까지!"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:fontFamily="@font/notosans_bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나누밀의 회원이 된 것을 환영합니다!"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="지금부터 나누밀의 모든 서비스를"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이용하실 수 있습니다"
+                android:layout_marginTop="7dp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나누밀과 함께"
+                android:layout_marginTop="30dp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나눔이 배부를 때까지"
+                android:layout_marginTop="7dp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나눔을 미루(meal)지말고 나눔을 밀(meal)어주세요!"
+                android:layout_marginTop="7dp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sign_up_finish_btn"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@drawable/btn_sign_up_white"
+        android:text="나누밀 시작하기"
+        android:layout_marginBottom="21dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/main_red"
+        android:fontFamily="@font/notosans_bold"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

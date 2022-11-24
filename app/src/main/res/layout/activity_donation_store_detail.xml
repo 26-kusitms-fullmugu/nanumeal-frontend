@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DonationStoreDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="691dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:overScrollMode="never" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/store_bg"
+                    android:adjustViewBounds="true"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-90dp"
+                    android:background="@drawable/store_bg2"
+                    android:adjustViewBounds="true" >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="30dp">
+
+                        <ImageView
+                            android:id="@+id/store_book_mark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/store_book_mark"
+                            android:adjustViewBounds="true" />
+
+                        <ImageView
+                            android:id="@+id/store_book_mark_fill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/store_book_mark_fill"
+                            android:adjustViewBounds="true"
+                            android:visibility="invisible"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/money_box"
+                            android:adjustViewBounds="true"
+                            android:layout_marginTop="134dp"
+                            android:layout_marginLeft="30dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="168dp"
+                            android:layout_marginLeft="47dp">
+
+                            <TextView
+                                android:id="@+id/save_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="230,000"
+                                android:fontFamily="@font/roboto_bold"
+                                android:textColor="#DA3915"
+                                android:textAlignment="textEnd"
+                                android:textSize="20sp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="원"
+                                android:fontFamily="@font/roboto_bold"
+                                android:textColor="#DA3915"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="168dp"
+                            android:layout_marginLeft="216dp">
+
+                            <TextView
+                                android:id="@+id/use_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8,000"
+                                android:fontFamily="@font/roboto_bold"
+                                android:textColor="#DA3915"
+                                android:textSize="20sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="원"
+                                android:fontFamily="@font/roboto_bold"
+                                android:textAlignment="textEnd"
+                                android:textColor="#DA3915"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/cha_icon1"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="510dp"
+                        android:layout_marginLeft="299dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/cha_icon_2"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="629dp"
+                        android:layout_marginLeft="33dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/cha_icon_3"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="726dp"
+                        android:layout_marginLeft="299dp"/>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/donation_bottom_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/donation_bottom_bar"
+            android:adjustViewBounds="true" />
+
+</LinearLayout>
