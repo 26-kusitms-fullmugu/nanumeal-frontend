@@ -170,12 +170,12 @@ public class HomeFragment extends Fragment {
         mRecyclerView.setAdapter(mRecyclerAdapter);
 
         mHomeItem = new ArrayList<>();
-        mHomeItem.add(new HomeItem("최강금돈까스", "영업중", "|", "1.4", "km", "이용가능", "사용가능금액", "8,000", "원", R.drawable.store_profile_image, 1, "가게보기", R.drawable.bottom_line));
-        mHomeItem.add(new HomeItem("소문난 마산아구", "영업중", "|", "0.09", "km", "이용가능", "사용가능금액", "8,000", "원", R.drawable.store_profile_image1, 1, "가게보기", R.drawable.bottom_line));
-        mHomeItem.add(new HomeItem("라쿠엔", "영업중", "|", "0.15", "km", "이용가능", "사용가능금액", "12,000", "원", R.drawable.store_profile_image2, 1, "가게보기", R.drawable.bottom_line));
-        mHomeItem.add(new HomeItem("장군족발보쌈", "영업중", "|", "0.20", "km", "이용가능", "사용가능금액", "11,000", "원", R.drawable.store_profile_image3, 1, "가게보기", R.drawable.bottom_line));
-        mHomeItem.add(new HomeItem("소문난집", "영업중", "|", "6.2", "km", "이용가능", "사용가능금액", "4,000", "원", R.drawable.store_profile_image4, 1, "가게보기", R.drawable.bottom_line));
-        mHomeItem.add(new HomeItem("종로찌개마을", "영업중", "|", "0.26", "km", "이용가능", "사용가능금액", "5,000", "원", R.drawable.store_profile_image5, 1, "가게보기", R.drawable.bottom_line));
+        mHomeItem.add(new HomeItem("최강금돈까스", "영업중", "|", "0.4", "km", "이용가능", "사용가능금액", "8,000", "원", R.drawable.store_profile_image, 1, "가게보기", R.drawable.bottom_line));
+        mHomeItem.add(new HomeItem("소문난아구찜", "영업중", "|", "0.8", "km", "이용가능", "사용가능금액", "8,000", "원", R.drawable.store_profile_image1, 1, "가게보기", R.drawable.bottom_line));
+        mHomeItem.add(new HomeItem("라쿠엔", "영업중", "|", "1.5", "km", "이용가능", "사용가능금액", "12,000", "원", R.drawable.store_profile_image2, 1, "가게보기", R.drawable.bottom_line));
+        mHomeItem.add(new HomeItem("장군족발보쌈", "영업중", "|", "1.5", "km", "이용가능", "사용가능금액", "11,000", "원", R.drawable.store_profile_image3, 1, "가게보기", R.drawable.bottom_line));
+        mHomeItem.add(new HomeItem("소문난집", "영업중", "|", "1.8", "km", "이용가능", "사용가능금액", "4,000", "원", R.drawable.store_profile_image4, 1, "가게보기", R.drawable.bottom_line));
+        mHomeItem.add(new HomeItem("종로찌개마을", "영업중", "|", "1.6", "km", "이용가능", "사용가능금액", "5,000", "원", R.drawable.store_profile_image5, 1, "가게보기", R.drawable.bottom_line));
         mRecyclerAdapter.setHomeList(getContext(), mHomeItem);
 
         /* adapt data */
