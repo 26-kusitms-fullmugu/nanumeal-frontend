@@ -19,13 +19,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/my_icon_nanumi_top"
-                android:layout_marginStart="14dp" />
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="40dp"/>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="15dp"
