@@ -108,7 +108,7 @@
             <EditText
                 android:text="민그닝"
                 android:id="@+id/nanumer_info_input2_nick_et"
-                android:layout_width="265dp"
+                android:layout_width="248dp"
                 android:layout_height="35dp"
                 android:hint="닉네임"
                 android:paddingStart="15dp"
@@ -121,15 +121,15 @@
 
             <Button
                 android:id="@+id/nanumer_info_input_nick_certify_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="104dp"
+                android:layout_height="35dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="중복확인"
                 android:textSize="13sp"
                 android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/white"
-                android:background="@drawable/btn_nanumer_info_input2_nick" />
+                android:background="@drawable/btn_info_input_id_certify"/>
 
         </LinearLayout>
 
