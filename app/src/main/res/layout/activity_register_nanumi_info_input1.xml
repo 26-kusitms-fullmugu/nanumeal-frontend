@@ -81,7 +81,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:text="1"
+                android:text="nanumeal"
                 android:id="@+id/nanumer_info_input_id_et"
                 android:layout_width="265dp"
                 android:layout_height="35dp"
@@ -131,7 +131,7 @@
             android:textColor="@color/font_black"/>
 
         <EditText
-            android:text="1"
+            android:text="1234"
             android:id="@+id/nanumer_info_input_pw_et1"
             android:layout_width="match_parent"
             android:layout_height="35dp"
@@ -146,7 +146,7 @@
             android:fontFamily="@font/roboto_regular"/>
 
         <EditText
-            android:text="1"
+            android:text="1234"
             android:id="@+id/nanumer_info_input_pw_et2"
             android:layout_width="match_parent"
             android:layout_height="35dp"
@@ -192,7 +192,7 @@
             android:layout_marginTop="15dp">
 
             <EditText
-                android:text="1"
+                android:text="nanumeal"
                 android:id="@+id/nanumer_info_input_email1"
                 android:layout_width="160dp"
                 android:layout_height="35dp"
