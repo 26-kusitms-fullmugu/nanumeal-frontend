@@ -98,8 +98,9 @@
             <Button
                 android:id="@+id/nanumer_info_input_id_certify_btn"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="중복확인"
                 android:textSize="13sp"
                 android:fontFamily="@font/roboto_regular"
@@ -228,10 +229,11 @@
         <Button
             android:id="@+id/nanumer_info_input_email_btn"
             android:layout_width="match_parent"
-            android:layout_height="41dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/btn_nanumer_info_input_email"
             android:text="이메일 인증하기"
             android:textSize="13sp"
