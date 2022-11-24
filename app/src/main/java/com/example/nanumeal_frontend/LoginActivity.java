@@ -17,9 +17,9 @@ import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import com.kakao.sdk.auth.model.OAuthToken;
-import com.kakao.sdk.user.UserApiClient;
-import com.kakao.sdk.user.model.User;
+//import com.kakao.sdk.auth.model.OAuthToken;
+//import com.kakao.sdk.user.UserApiClient;
+//import com.kakao.sdk.user.model.User;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,9 +28,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Calendar;
-
-import kotlin.Unit;
-import kotlin.jvm.functions.Function2;
+//
+//import kotlin.Unit;
+//import kotlin.jvm.functions.Function2;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -62,30 +62,30 @@ public class LoginActivity extends AppCompatActivity {
 
     public void getUserInfo() { //user 정보 들고오기
         String TAG = "getUserInfo";
-        UserApiClient.getInstance().me((user, meError) -> {
-            if (meError != null) {
-                Log.e(TAG, "사용자 정보 요청 실패", meError);
-            } else {
-                System.out.println("로그인 완료");
-                Log.i(TAG, user.toString());
-                {
-                    Log.i(TAG, "사용자 정보 요청 성공" +
-                            "\n회원번호(id): " + user.getId() +
-                            "\n이메일: " + user.getKakaoAccount().getEmail() +
-                            "\n닉네임: " + user.getProperties().get("nickname"));
-                }
-                kakaoId = String.valueOf(user.getId());
-                email = String.valueOf(user.getKakaoAccount().getEmail());
-                name = String.valueOf(user.getProperties().get("nickname"));
-
-                KAKAO_CERTIFY = 1;
-                kakaoCertifySelect();
-                Log.d("Certify", String.valueOf(KAKAO_CERTIFY));
-                postData(kakaoId, name, email);
-
-            }
-            return null;
-        });
+//        UserApiClient.getInstance().me((user, meError) -> {
+//            if (meError != null) {
+//                Log.e(TAG, "사용자 정보 요청 실패", meError);
+//            } else {
+//                System.out.println("로그인 완료");
+//                Log.i(TAG, user.toString());
+//                {
+//                    Log.i(TAG, "사용자 정보 요청 성공" +
+//                            "\n회원번호(id): " + user.getId() +
+//                            "\n이메일: " + user.getKakaoAccount().getEmail() +
+//                            "\n닉네임: " + user.getProperties().get("nickname"));
+//                }
+//                kakaoId = String.valueOf(user.getId());
+//                email = String.valueOf(user.getKakaoAccount().getEmail());
+//                name = String.valueOf(user.getProperties().get("nickname"));
+//
+//                KAKAO_CERTIFY = 1;
+//                kakaoCertifySelect();
+//                Log.d("Certify", String.valueOf(KAKAO_CERTIFY));
+//                postData(kakaoId, name, email);
+//
+//            }
+//            return null;
+//        });
 
     }
 
@@ -199,23 +199,23 @@ public class LoginActivity extends AppCompatActivity {
 
         Log.d("kakao_CERTIFY_before", String.valueOf(KAKAO_CERTIFY));
 
-        Function2<OAuthToken, Throwable, Unit> callback = new Function2<OAuthToken, Throwable, Unit>() {
-            @Override
-            public Unit invoke(OAuthToken oAuthToken, Throwable throwable) {
-                if(oAuthToken != null) {
-                    Log.d("KaKao", "로그인 성공");
-                    UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
-                        @Override
-                        public Unit invoke(User user, Throwable throwable) {
-                          getUserInfo();
-                          KAKAO_CERTIFY = 1;
-                            return null;
-                        }
-                    });
-                }
-                return null;
-            }
-        };
+//        Function2<OAuthToken, Throwable, Unit> callback = new Function2<OAuthToken, Throwable, Unit>() {
+//            @Override
+//            public Unit invoke(OAuthToken oAuthToken, Throwable throwable) {
+//                if(oAuthToken != null) {
+//                    Log.d("KaKao", "로그인 성공");
+//                    UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
+//                        @Override
+//                        public Unit invoke(User user, Throwable throwable) {
+//                          getUserInfo();
+//                          KAKAO_CERTIFY = 1;
+//                            return null;
+//                        }
+//                    });
+//                }
+//                return null;
+//            }
+//        };
 
         Log.d("KeyHash", getKeyHash());
         ImageView kakaoLogin = (ImageView) findViewById(R.id.login_kakao);
@@ -224,11 +224,11 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                있으면 연동, 없으면 카카오톡 인터넷같이 해서 로그인하기 입니다.
 //                로그인이 되거나 오류가 있으면 저기 callback 함수에서 판단하여 위에 Function2 callback 함수가 작동합니다.
-                if (UserApiClient.getInstance().isKakaoTalkLoginAvailable(LoginActivity.this)) {
-                    UserApiClient.getInstance().loginWithKakaoTalk(LoginActivity.this, callback);
-                } else {
-                    UserApiClient.getInstance().loginWithKakaoAccount(LoginActivity.this, callback);
-                }
+//                if (UserApiClient.getInstance().isKakaoTalkLoginAvailable(LoginActivity.this)) {
+//                    UserApiClient.getInstance().loginWithKakaoTalk(LoginActivity.this, callback);
+//                } else {
+//                    UserApiClient.getInstance().loginWithKakaoAccount(LoginActivity.this, callback);
+//                }
 
             }
         });

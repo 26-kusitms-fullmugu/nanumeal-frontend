@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EatRegistrationActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="741dp"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_marginTop="-30dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/temp_bg"
+            android:adjustViewBounds="true" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:layout_marginLeft="120dp">
+
+                <ImageView
+                    android:id="@+id/eat_img"
+                    android:layout_width="158dp"
+                    android:layout_height="158dp"
+                    app:srcCompat="@drawable/eat_img"
+                    android:adjustViewBounds="true"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="540dp"
+                android:paddingHorizontal="30dp">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30dp">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/eat_text_bg"
+                    android:hint="    사용하실 금액을 입력해주세요."
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:textColorHint="#939393"
+                    android:layout_marginTop="540dp"/>
+
+                <EditText
+                    android:layout_marginTop="670dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/eat_text_bg"
+                    android:hint="    나눔터 코드를 입력해주세요."
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textColorHint="#939393"
+                    android:textSize="14sp" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/eat_bottom_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/eat_confirm_btn"
+        android:adjustViewBounds="true" />
+
+</LinearLayout>

@@ -61,6 +61,7 @@
             android:fontFamily="@font/roboto_bold"/>
 
         <EditText
+            android:text="1"
             android:id="@+id/nanumer_info_input2_name_et"
             android:layout_width="match_parent"
             android:layout_height="35dp"
@@ -105,6 +106,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:text="1"
                 android:id="@+id/nanumer_info_input2_nick_et"
                 android:layout_width="265dp"
                 android:layout_height="35dp"
@@ -194,6 +196,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:text="1"
                 android:id="@+id/nanumer_info_Input2_age_et"
                 android:layout_width="50dp"
                 android:layout_height="35dp"
@@ -238,6 +241,7 @@
             android:fontFamily="@font/roboto_bold"/>
 
         <EditText
+            android:text="1"
             android:id="@+id/nanumer_info_Input2_LoveAdd_et"
             android:layout_width="match_parent"
             android:layout_height="35dp"

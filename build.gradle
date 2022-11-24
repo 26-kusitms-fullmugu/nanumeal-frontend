@@ -3,3 +3,20 @@ plugins {
     id 'com.android.application' version '7.3.0' apply false
     id 'com.android.library' version '7.3.0' apply false
 }
+
+allprojects {
+    repositories {
+        // 네이버 지도 저장소
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven {
+            url 'https://naver.jfrog.io/artifactory/maven/'
+        }
+//        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
