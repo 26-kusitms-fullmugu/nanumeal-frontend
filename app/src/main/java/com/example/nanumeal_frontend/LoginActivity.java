@@ -2,66 +2,53 @@ package com.example.nanumeal_frontend;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.user.UserApiClient;
-import com.kakao.sdk.user.model.Account;
 import com.kakao.sdk.user.model.User;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 
 public class LoginActivity extends AppCompatActivity {
     public ArrayList<String> LoginValue;
-    String kakaoId, kakaoName, kakaoEmail;
-    public int KAKAO_CERTIFY = 0;
+    String kakaoId, name, email, loginId, password;
+    public static int KAKAO_CERTIFY = 0;
 
-//    public void kakaoLogin() {
-//        String TAG = "KAKAOLOGIN()";
-//        UserApiClient.getInstance().loginWithKakaoTalk(LoginActivity.this,(oAuthToken, error) -> {
-//            if(error != null) {
-//                Log.e(TAG,"로그인 실패", error);
-//            } else if(oAuthToken != null) {
-//                Log.i(TAG, "로그인 성공(토큰): " + oAuthToken.getAccessToken());
-//                getUserInfo();
-//            }
-//            return null;
-//        });
-//    }
-//
-//    public void accountLogin() {
-//        String TAG = "ACCOUNTLOGIN()";
-//        UserApiClient.getInstance().loginWithKakaoAccount(LoginActivity.this,(oAuthToken, error) -> {
-//            if (error != null) {
-//                Log.e(TAG, "로그인 실패", error);
-//            } else if (oAuthToken != null) {
-//                Log.i(TAG, "로그인 성공(토큰) : " + oAuthToken.getAccessToken());
-//                getUserInfo();
-//            }
-//            return null;
-//        });
-//    }
 
-    public void kakaoCertifySelect() {
+    public void kakaoCertifySelect() { //Kakao LOGIN CHECK
         if(KAKAO_CERTIFY == 1) {
             Intent intent = new Intent(LoginActivity.this, RegisterSelectActivity.class);
             intent.putExtra("KAKAO_CERTIFY", KAKAO_CERTIFY); //카카오 가입 x
@@ -72,8 +59,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public void getUserInfo() {
-        String TAG = "getUserInfo()";
+    public void getUserInfo() { //user 정보 들고오기
+        String TAG = "getUserInfo";
         UserApiClient.getInstance().me((user, meError) -> {
             if (meError != null) {
                 Log.e(TAG, "사용자 정보 요청 실패", meError);
@@ -87,19 +74,48 @@ public class LoginActivity extends AppCompatActivity {
                             "\n닉네임: " + user.getProperties().get("nickname"));
                 }
                 kakaoId = String.valueOf(user.getId());
-                kakaoEmail = String.valueOf(user.getKakaoAccount().getEmail());
-                kakaoName = String.valueOf(user.getProperties().get("nickname"));
+                email = String.valueOf(user.getKakaoAccount().getEmail());
+                name = String.valueOf(user.getProperties().get("nickname"));
+
                 KAKAO_CERTIFY = 1;
                 kakaoCertifySelect();
                 Log.d("Certify", String.valueOf(KAKAO_CERTIFY));
-//                Log.d("kakaoId", "kakaoId : " + kakaoId);
-//                Log.d("kakaoName", "kakaoName: " + kakaoName);
-//                Log.d("kakaoEmail", "kakaoEmail: " + kakaoEmail);
+                postData(kakaoId, name, email);
 
             }
             return null;
         });
 
+    }
+
+    private void postLogin(String userId, String password) {
+
+    }
+
+    private void postData(String kakaoId, String name, String email) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://ec2-3-38-49-6.ap-northeast-2.compute.amazonaws.com:80/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        RestApi restApi = retrofit.create(RestApi.class);
+        KakaoModal kakaoModal = new KakaoModal(kakaoId, name, email);
+        Log.d("create_modal", "modal success");
+        Call<KakaoModal> call = restApi.createPost(kakaoModal);
+
+        call.enqueue(new Callback<KakaoModal>() {
+            @Override
+            public void onResponse(Call<KakaoModal> call, Response<KakaoModal> response) {
+                Log.d("POST SERVER_Kakao", "success");
+                KakaoModal responseFromAPI = response.body();
+                String responseString = "Response Bearer: " + response.code();
+                Log.d("response", responseString);
+            }
+
+            @Override
+            public void onFailure(Call<KakaoModal> call, Throwable t) {
+                Log.d("POST SERVER_Kakao", "fail");
+            }
+        });
     }
 
     public String getKeyHash() {
@@ -135,11 +151,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 case R.id.login_login_btn:
 
-                case R.id.login_kakao:
-                    Uri uri = Uri.parse("https://kauth.kakao.com/oauth/authorize?client_id=d041b6f16d3bc4f0a3bc384015073302&redirect_uri=http://ec2-3-38-49-6.ap-northeast-2.compute.amazonaws.com:80/login/oauth2/code/kakao&response_type=code");
-                    Intent intent1 = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent1);
-                    break;
 
             }
 
@@ -154,6 +165,8 @@ public class LoginActivity extends AppCompatActivity {
         selectListener selectListener = new selectListener();
         TextView SignUpTv = (TextView) findViewById(R.id.login_signUp_tv);
         SignUpTv.setOnClickListener(selectListener);
+
+        Log.d("kakao_CERTIFY_before", String.valueOf(KAKAO_CERTIFY));
 
         Function2<OAuthToken, Throwable, Unit> callback = new Function2<OAuthToken, Throwable, Unit>() {
             @Override
@@ -185,11 +198,11 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     UserApiClient.getInstance().loginWithKakaoAccount(LoginActivity.this, callback);
                 }
-//                restUri();
 
             }
         });
-        Log.d("KAKAOCERTIFY", String.valueOf(KAKAO_CERTIFY));
+
+        Log.d("kakao_CERTIFY_after", String.valueOf(KAKAO_CERTIFY));
     }
 
 }
