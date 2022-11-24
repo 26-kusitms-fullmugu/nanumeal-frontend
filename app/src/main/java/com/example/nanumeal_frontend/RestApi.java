@@ -17,6 +17,9 @@ public interface RestApi {
     @POST("/auth/verify/nickname") //닉네임 중복 확인
     Call<LoginModal> certifyNickname(@Body LoginModal nickNameModal);
 
+    @POST("/auth/login") //그냥 로그인
+    Call<FormLoginModal> formLogin(@Body FormLoginModal formLoginModal);
+
 
 
 

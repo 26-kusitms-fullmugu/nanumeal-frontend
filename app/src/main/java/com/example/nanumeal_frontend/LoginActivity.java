@@ -45,6 +45,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 public class LoginActivity extends AppCompatActivity {
     public ArrayList<String> LoginValue;
     String kakaoId, name, email, loginId, password;
+    String login;
     public static int KAKAO_CERTIFY = 0;
 
 
@@ -54,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
             intent.putExtra("KAKAO_CERTIFY", KAKAO_CERTIFY); //카카오 가입 x
             startActivity(intent);
         } else {
-            Toast.makeText(this,"카카오 로그인을 진행해주세요", Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(),"카카오 로그인을 진행해주세요", Toast.LENGTH_SHORT);
         }
     }
 
@@ -88,13 +89,39 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void postLogin(String userId, String password) {
+    private void GetUserType(String loginId) { //회원 타입 받아오기(GET)
+
+    }
+
+    private void postLogin(String loginId, String password) { //회원 로그인(POST)
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://ec2-3-38-49-6.ap-northeast-2.compute.amazonaws.com:80/") //base url
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        RestApi restApi = retrofit.create(RestApi.class); //retrofit
+
+        FormLoginModal formLoginModal = new FormLoginModal(loginId, password);
+        Call<FormLoginModal> call = restApi.formLogin(formLoginModal);
+
+        call.enqueue(new Callback<FormLoginModal>() {
+            @Override
+            public void onResponse(Call<FormLoginModal> call, Response<FormLoginModal> response) { //성공
+                login = response.toString();
+                Log.d("Login", login); //받은값 출력
+            }
+
+            @Override
+            public void onFailure(Call<FormLoginModal> call, Throwable t) { //실패
+                Toast.makeText(getApplicationContext(),"아이디, 비밀번호가 다릅니다!", Toast.LENGTH_SHORT);
+            }
+        });
+
 
     }
 
     private void postData(String kakaoId, String name, String email) {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://ec2-3-38-49-6.ap-northeast-2.compute.amazonaws.com:80/")
+                .baseUrl("http://ec2-3-38-49-6.ap-northeast-2.compute.amazonaws.com:80/") //base url
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         RestApi restApi = retrofit.create(RestApi.class);
@@ -150,7 +177,11 @@ public class LoginActivity extends AppCompatActivity {
                     break;
 
                 case R.id.login_login_btn:
+                    postLogin(loginId, password);
+                    if(login.equals("login")) {
+                        Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
 
+                    }
 
             }
 

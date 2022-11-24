@@ -4,6 +4,12 @@ public class FormLoginModal {
     private String loginId;
     private String password;
 
+    public FormLoginModal(String loginId, String password)
+    {
+        this.loginId = loginId;
+        this.password = password;
+    }
+
 
     public String getLoginId() {
         return loginId;
