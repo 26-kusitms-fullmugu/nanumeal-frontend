@@ -283,7 +283,6 @@ cf) 출처 : 강득구 더불어민주당 의원실 자료
 |GET|/auth/token|소셜 로그인|
 |POST|/auth/signup|폼 회원가입|
 |POST|/auth/login|폼 로그인|
-|POST|/auth/login/kakao|new 소셜 로그인 |
 |POST|/auth/email|이메일 인증|
 |POST|/auth/verify/nickname|닉네임 중복 확인|
 |POST|/auth/verify/login-id|아이디 중복 확인|
