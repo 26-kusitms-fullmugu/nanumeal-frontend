@@ -205,7 +205,7 @@
             android:layout_marginTop="15dp">
 
             <EditText
-                android:text="nanumeal"
+                android:text="mshin0905"
                 android:id="@+id/nanumer_info_input_email1"
                 android:layout_width="160dp"
                 android:layout_height="35dp"
