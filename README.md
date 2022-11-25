@@ -1,5 +1,11 @@
 # nanumeal-frontend
-우주최강 이지현 두개의 심장 신민서가 함께하는 바른먹거리풀먹어 프론트엔드
+영천 까르띠에 이지현 두개의 심장 신민서가 함께하는 바른먹거리풀먹어 프론트엔드
+
+Front 작업 주소: https://github.com/26-kusitms-fullmugu/nanumeal-frontend
+
+Back 작업 주소: https://github.com/26-kusitms-fullmugu/nanumeal-backend
+
+APK 파일 위치: app/debug/app-debug.apk
 
 
 ### 📑 서비스 소개
@@ -275,6 +281,36 @@ cf) 출처 : 강득구 더불어민주당 의원실 자료
 
 ![README_GitFlow](https://mblogthumb-phinf.pstatic.net/MjAxODAyMDNfOTgg/MDAxNTE3NjI3MzI0NjU1.V2GkhqrdgVSj0N7n8PDlWb9JvEQInMis5jW1b7QnCE8g.PQtKm7LOuraB3UeBICJ-byEe4SOTiWfIzQylWvzAPxog.PNG.aufcl4858/kF7Uf.png?type=w2)
 
+### 📑 API 명세
+|메소드|URI|기능설명|
+|:--:|:--:|:----------:|
+|GET|/login/oauth2/code/kakao|인가 코드 받기|
+|GET|/auth/token|소셜 로그인|
+|POST|/auth/signup|폼 회원가입|
+|POST|/auth/login|폼 로그인|
+|POST|/auth/email|이메일 인증|
+|POST|/auth/verify/nickname|닉네임 중복 확인|
+|POST|/auth/verify/login-id|아이디 중복 확인|
+|POST|/auth/verify/email|이메일 중복 확인|
+|POST|/auth/document|서류 인증|
+|PUT|/user/info|소셜 로그인 후 유저 정보 입력|
+|GET|/user/info|현재 유저 정보 확인|
+|DELETE|/user/info|현재 유저 탈퇴|
+|GET|/mypage|회원정보 조회|
+|GET|/thanks/donation|기부한내역 + 감사메시지 출력|
+|GET|/history/use|이용내역 출력|
+|GET|/main/list|식당 리스트 불러오기(위도 경도 x,y 좌표 보내주기 ⇒ 사각형)|
+|GET|/main/list/donate|식당 리스트 불러오기(후원금액 적은순)|
+|GET|/main/list/remainDon|식당 리스트 불러오기(남은 금액이 메뉴의 최소 금액보다 작은 것)|
+|GET|/main/list/distance|식당 리스트 불러오기(거리순)|
+|GET|/main/{id}|식당 상세페이지 불러오기|
+|GET|/favorite|식당 즐겨찾기 가져오기|
+|POST|/favorite|식당 즐겨찾기하기|
+|DELETE|/favorite/{favoriteId}|식당 즐겨찾기 취소|
+|POST|/donation/make|후원하기|
+|POST|/history/make|후원받기|
+|POST|/thanks/make|식당 즐겨찾기 취소|
+
 ### 📑 주요기능 명세서
 
 > 회원가입 / 로그인
@@ -409,3 +445,5 @@ cf) 출처 : 강득구 더불어민주당 의원실 자료
 - 디자인 패턴
 - 외부 모듈 통신 방법
 -->
+
+
