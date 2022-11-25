@@ -267,17 +267,14 @@
                             android:visibility="invisible"/>
 
                     </FrameLayout>
-
-                    <ImageView
-                        android:id="@+id/support_bottom_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:adjustViewBounds="true"
-                        app:srcCompat="@drawable/support_bottom_bar" />
-
                 </FrameLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
+    <ImageView
+        android:id="@+id/support_bottom_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/support_bottom_bar" />
 </LinearLayout>

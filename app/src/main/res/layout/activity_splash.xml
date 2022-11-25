@@ -13,10 +13,21 @@
         android:layout_height="wrap_content"
         android:src="@drawable/elipse_white_splash"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="1375px"
+        android:layout_marginTop="1455px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_aesop"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
     <ImageView
         android:id="@+id/splash_nanumi_icon"
@@ -24,7 +35,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/icon_nanumi_splash"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="1480px"
+        android:layout_marginTop="1560px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -36,7 +47,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/splash_text"
         android:layout_marginStart="275dp"
-        android:layout_marginTop="1700px"
+        android:layout_marginTop="1780px"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

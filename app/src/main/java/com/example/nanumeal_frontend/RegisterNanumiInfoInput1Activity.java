@@ -231,9 +231,8 @@ public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
-        EditText emailEt = (EditText) findViewById(R.id.nanumer_info_input_email1);
         Button emailLayoutBtn = (Button) findViewById(R.id.nanumer_info_input_email_certify_btn);
+        EditText emailEt = (EditText) findViewById(R.id.nanumer_info_input_email1);
         emailLayoutBtn.setOnClickListener(onClickListener);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
