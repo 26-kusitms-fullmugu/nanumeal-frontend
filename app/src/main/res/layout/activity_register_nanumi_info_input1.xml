@@ -102,11 +102,25 @@
                 android:layout_marginStart="10dp"
                 android:text="중복확인"
                 android:textSize="13sp"
+                android:visibility="visible"
                 android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/white"
                 android:background="@drawable/btn_info_input_id_certify"/>
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/nanumer_info_input_id_certify_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용가능한 아이디입니다"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:fontFamily="@font/roboto_regular"/>
+
 
     </LinearLayout>
 
@@ -232,11 +246,74 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginTop="10dp"
+            android:cursorVisible="true"
             android:background="@drawable/btn_nanumer_info_input_email"
             android:text="이메일 인증하기"
             android:textSize="13sp"
             android:fontFamily="@font/roboto_bold"
             android:textColor="@color/font_gray"/>
+
+        <LinearLayout
+            android:id="@+id/nanumer_info_Input_email_certify_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인증번호 확인"
+                android:textColor="@color/font_black"
+                android:textSize="13sp"
+                android:fontFamily="@font/roboto_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:text="1"
+                    android:id="@+id/nanumer_info_input_email_certify_et"
+                    android:layout_width="301dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/btn_nanumer_info_input"
+                    android:hint="이메일"
+                    android:maxLines="1"
+                    android:paddingStart="15dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/font_gray"
+                    android:fontFamily="@font/roboto_regular"/>
+
+                <Button
+                    android:id="@+id/nanumer_info_input_email_certify_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:text="확인"
+                    android:textColor="@color/font_gray"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="13sp"
+                    android:background="@drawable/btn_nanumer_info_input_email"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nanumer_info_input_email_certify_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이메일이 인증되었습니다."
+            android:layout_marginStart="25dp"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/main_red"
+            android:fontFamily="@font/roboto_regular"/>
 
 
     </LinearLayout>

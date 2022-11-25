@@ -17,13 +17,13 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.naver.maps.geometry.LatLng;
-import com.naver.maps.map.MapView;
-import com.naver.maps.map.NaverMap;
-import com.naver.maps.map.OnMapReadyCallback;
-import com.naver.maps.map.overlay.InfoWindow;
-import com.naver.maps.map.overlay.Marker;
-import com.naver.maps.map.util.FusedLocationSource;
+//import com.naver.maps.geometry.LatLng;
+//import com.naver.maps.map.MapView;
+//import com.naver.maps.map.NaverMap;
+//import com.naver.maps.map.OnMapReadyCallback;
+//import com.naver.maps.map.overlay.InfoWindow;
+//import com.naver.maps.map.overlay.Marker;
+//import com.naver.maps.map.util.FusedLocationSource;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,21 +51,21 @@ public class HomeFragment extends Fragment {
             Manifest.permission.ACCESS_COARSE_LOCATION
     };
 
-    private FusedLocationSource mLocationSource;
-    private NaverMap mNaverMap;
-    private MapView mapView;
+//    private FusedLocationSource mLocationSource;
+//    private NaverMap mNaverMap;
+//    private MapView mapView;
     private Geocoder geocoder;
     String token;
     String latitude;
     String longitude;
 
     // 마커 정보 저장시킬 변수들 선언
-    private Vector<LatLng> markersPosition;
-    private Vector<Marker> activeMarkers;
+//    private Vector<LatLng> markersPosition;
+//    private Vector<Marker> activeMarkers;
     private List<String> storeName;
 
     // 마커 클릭시 정보창
-    private InfoWindow infoWindow;
+//    private InfoWindow infoWindow;
     String infoName;
 
     // 선택한 마커의 위치가 가시거리(카메라가 보고있는 위치 반경 5km 내)에 있는지 확인
@@ -143,8 +143,6 @@ public class HomeFragment extends Fragment {
 
 
         // 지도 객체 생성
-        mapView = (MapView) rootView.findViewById(R.id.mapView);
-        mapView.onCreate(savedInstanceState);
 
 
         // getMapAsync를 호출하여 비동기로 onMapReady 콜백 메서드 호출
