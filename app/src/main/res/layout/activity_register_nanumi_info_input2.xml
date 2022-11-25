@@ -134,6 +134,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/nanumer_info_Input2_nickname_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -142,6 +143,18 @@
             android:textSize="11sp"
             android:fontFamily="@font/roboto_regular"
             android:textColor="@color/font_gray"/>
+
+        <TextView
+            android:id="@+id/nanumer_info_Input2_nickname_certify"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용가능한 닉네임입니다."
+            android:textColor="@color/main_red"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 
@@ -166,7 +179,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginTop="384dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"/>
 
 

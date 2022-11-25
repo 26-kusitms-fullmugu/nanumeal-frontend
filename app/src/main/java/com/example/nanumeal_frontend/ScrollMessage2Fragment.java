@@ -113,6 +113,10 @@ public class ScrollMessage2Fragment extends Fragment {
                     case R.id.scroll_message2_et:
                         etlength.setText(messageEt.getText().length());
                         break;
+                    case R.id.scroll_message_icon3:
+                        icon3.setImageResource(R.drawable.icon_warmup_big);
+                        break;
+
                 }
 
             }
@@ -125,6 +129,7 @@ public class ScrollMessage2Fragment extends Fragment {
         status4.setOnClickListener(clickListener);
         status5.setOnClickListener(clickListener);
 
+        icon3.setOnClickListener(clickListener);
 
         return rootView;
     }

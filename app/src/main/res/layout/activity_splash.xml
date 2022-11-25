@@ -19,6 +19,17 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_aesop"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <ImageView
         android:id="@+id/splash_nanumi_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,16 +41,16 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
 
-<!--    <ImageView-->
-<!--        android:id="@+id/splash_text"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/splash_text"-->
-<!--        android:layout_marginStart="275dp"-->
-<!--        android:layout_marginTop="1780px"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
+    <ImageView
+        android:id="@+id/splash_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_text"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="1780px"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

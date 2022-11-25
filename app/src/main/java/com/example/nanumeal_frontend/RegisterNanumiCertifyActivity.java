@@ -38,6 +38,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.normal.TedPermission;
@@ -56,6 +57,7 @@ public class RegisterNanumiCertifyActivity extends AppCompatActivity {
     private static final String TAG = "CertifyActivity";
     String userValue;
     Bitmap bitmap;
+    private int Certify = 0;
 
 
     public static Bitmap StringToBitmap(String encodedString) { //Bitmap to String(Method)
@@ -83,6 +85,8 @@ public class RegisterNanumiCertifyActivity extends AppCompatActivity {
                 intent1.putExtra("userValue", userValue);
                 startActivity(intent1);
                 finish(); //이동
+
+                Toast.makeText(getApplicationContext(), "서류 인증이 완료되었습니다.", Toast.LENGTH_SHORT);
             }
         }).create();
         dialog.show();
@@ -104,6 +108,8 @@ public class RegisterNanumiCertifyActivity extends AppCompatActivity {
 
                         ImageView cardIv = (ImageView) findViewById(R.id.register_nanumi_imageview);
                         cardIv.setImageBitmap(bitmap);
+                        Certify = 1;
+
 
                     }
                 }
@@ -114,25 +120,37 @@ public class RegisterNanumiCertifyActivity extends AppCompatActivity {
 
 
     private void captureAlbum() { //앨범 불러오기 callback
+        Log.d("certify", String.valueOf(Certify));
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
         intent.setAction(Intent.ACTION_PICK);
         activityResultLauncher.launch(intent);
         Uri uri = intent.getData();
         Log.d("uri", String.valueOf(uri));
+        Certify = 1;
+        Log.d("certify", String.valueOf(Certify));
+        if(Certify == 1) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(RegisterNanumiCertifyActivity.this);
+            dialog = builder.setMessage("이 카드로 인증하시겠습니까?").setPositiveButton("회원가입 하러가기", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent1 = new Intent(RegisterNanumiCertifyActivity.this, RegisterNanumiInfoInput1Activity.class);
+                    userValue = "nanumi_certify";
+                    intent1.putExtra("userValue", userValue);
+                    startActivity(intent1);
+                    finish();
+                }
+            }).create();
+            dialog.show();
+        }
+        else {
+            Intent intent1 = new Intent(RegisterNanumiCertifyActivity.this, MainActivity.class);
+            userValue = "nanumi_certify";
+            intent1.putExtra("userValue", userValue);
+            startActivity(intent1);
+            finish();
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(RegisterNanumiCertifyActivity.this);
-        dialog = builder.setMessage("이 카드로 인증하시겠습니까?").setPositiveButton("회원가입 하러가기", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent intent1 = new Intent(RegisterNanumiCertifyActivity.this, RegisterNanumiInfoInput1Activity.class);
-                userValue = "nanumi_certify";
-                intent1.putExtra("userValue", userValue);
-                startActivity(intent1);
-                finish();
-            }
-        }).create();
-        dialog.show();
+        }
 
     }
 
@@ -147,6 +165,7 @@ public class RegisterNanumiCertifyActivity extends AppCompatActivity {
                            Uri uri = intent.getData();
                         ImageView cardImage = (ImageView) findViewById(R.id.register_nanumi_imageview);
                         cardImage.setImageURI(uri);
+                        Toast.makeText(getApplicationContext(), "서류 인증이 완료되었습니다.", Toast.LENGTH_SHORT);
 
                     }
                 }

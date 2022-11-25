@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         init();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        Fragment initFragment = new DonationFragment();
+        Fragment initFragment = new HomeFragment();
         fragmentManager.beginTransaction().replace(R.id.main_layout, initFragment).commit();
 
         settingListener();

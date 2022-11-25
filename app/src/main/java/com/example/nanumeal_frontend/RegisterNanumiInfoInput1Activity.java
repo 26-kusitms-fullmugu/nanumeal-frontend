@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
+import android.text.Layout;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -29,6 +30,7 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 
 public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
@@ -43,15 +45,21 @@ public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
     String[] items = {"naver.com", "daum.net", "nate.com", "gmail.com"};
 
     public void emailCertifyClass() {
+        final View emailCertifyLayout = (View) findViewById(R.id.nanumer_info_Input_email_certify_layout);
+        emailCertifyLayout.setVisibility(View.VISIBLE);
+        final Button emailBtn = (Button) findViewById(R.id.nanumer_info_input_email_btn);
+        emailBtn.setVisibility(View.GONE);
+
+        Toast.makeText(getApplicationContext(), "이메일 인증이 완료되었습니다.", Toast.LENGTH_SHORT);
 
     }
 
     public void idCertifyClass() {
-        final EditText idEt = (EditText) findViewById(R.id.nanumer_info_input_id_et);
         final Button idCheckBtn = (Button) findViewById(R.id.nanumer_info_input_id_certify_btn);
-
+        final EditText idEt = (EditText) findViewById(R.id.nanumer_info_input_id_et);
 
         String userIdEx = idEt.getText().toString();
+
 
         userId = userIdEx; //나중에 서버 생기면 지울거
         if (idEt.getText().toString().equals("")) { //빈칸이면
@@ -158,7 +166,11 @@ public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
                     }
 
                 case R.id.nanumer_info_input_id_certify_btn:
+                    final Button idCheckBtn = (Button) findViewById(R.id.nanumer_info_input_id_certify_btn);
+                    final TextView certifyText = (TextView) findViewById(R.id.nanumer_info_input_id_certify_tv);
                     idCertifyClass();
+                    idCheckBtn.setText("확인완료");
+                    certifyText.setVisibility(View.VISIBLE);
                     break;
 
                 case R.id.nanumer_info_input_email_btn:
@@ -168,9 +180,19 @@ public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
                         dialog.show();
                     } else {
                         Log.d("UserEmail", userEmail); //입력한 et 값이 있을때
+                        final Button emailCertifyBtn = (Button) findViewById(R.id.nanumer_info_input_email_btn);
+                        emailCertifyBtn.setText("이메일 인증번호 받기");
                         emailCertifyClass();
                     }
                     break;
+
+                case R.id.nanumer_info_input_email_certify_btn:
+                    final View emailCertifyLayout = (View) findViewById(R.id.nanumer_info_Input_email_certify_layout);
+                    final TextView emailCertifyTv = (TextView) findViewById(R.id.nanumer_info_input_email_certify_tv);
+                    emailCertifyLayout.setVisibility(View.GONE);
+                    emailCertifyTv.setVisibility(View.VISIBLE);
+
+
             }
 
         }
@@ -209,8 +231,9 @@ public class RegisterNanumiInfoInput1Activity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
+        Button emailLayoutBtn = (Button) findViewById(R.id.nanumer_info_input_email_certify_btn);
         EditText emailEt = (EditText) findViewById(R.id.nanumer_info_input_email1);
+        emailLayoutBtn.setOnClickListener(onClickListener);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

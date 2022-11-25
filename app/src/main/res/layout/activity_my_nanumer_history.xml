@@ -72,7 +72,7 @@
                     android:id="@+id/my_nanumer_history_money"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="56000"
+                    android:text="34,000"
                     android:textColor="@color/main_red"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_bold"/>
@@ -203,7 +203,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="30000"
+                                    android:text="8,000"
                                     android:fontFamily="@font/notosans_bold"
                                     android:textColor="@color/font_black"
                                     android:textSize="15sp"/>
@@ -309,7 +309,7 @@
                             android:id="@+id/my_nanumer_history_store_iv2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:src="@drawable/photo_nackwon_taco"/>
+                            android:src="@drawable/photo_nackwon_taco" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -343,7 +343,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="4000"
+                                    android:text="4,000"
                                     android:fontFamily="@font/notosans_bold"
                                     android:textColor="@color/font_black"
                                     android:textSize="15sp"/>
@@ -482,7 +482,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="8000"
+                                    android:text="8,000"
                                     android:fontFamily="@font/notosans_bold"
                                     android:textColor="@color/font_black"
                                     android:textSize="15sp"/>
