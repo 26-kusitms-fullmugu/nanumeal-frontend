@@ -35,7 +35,6 @@
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            android:layout_marginStart="95dp"
             android:layout_marginTop="15dp">
 
             <LinearLayout
@@ -59,7 +58,7 @@
                             android:id="@+id/scroll_message_icon1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/icon_yummy_big" />
+                            android:src="@drawable/icon_yummy_middle" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -156,14 +155,14 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:layout_marginStart="65dp"
-                            android:layout_marginEnd="200dp"
+                            android:layout_marginEnd="50dp"
                             android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/scroll_message_icon5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/icon_fighting_middle"/>
+                                android:src="@drawable/icon_fighting_middle2"/>
 
                             <TextView
                                 android:layout_width="wrap_content"

@@ -115,7 +115,15 @@ public class RegisterNanumiInfoInput2Activity extends AppCompatActivity {
                     break;
 
                 case R.id.nanumer_info_input_nick_certify_btn:
+                    final Button nicknameBtn = (Button) findViewById(R.id.nanumer_info_input_nick_certify_btn);
+                    final TextView nicknameTv = (TextView) findViewById(R.id.nanumer_info_Input2_nickname_tv);
+                    final TextView nicknameCertify = (TextView) findViewById(R.id.nanumer_info_Input2_nickname_certify);
+                    nicknameTv.setVisibility(View.GONE);
+                    nicknameCertify.setVisibility(View.VISIBLE);
+                    nicknameBtn.setText("확인완료");
+                    nicknameBtn.setBackgroundResource(R.drawable.btn_red_login);
                     setUserNickName();
+
                     break;
             }
 
@@ -153,6 +161,9 @@ public class RegisterNanumiInfoInput2Activity extends AppCompatActivity {
 
         Button signInBtn = (Button) findViewById(R.id.nanumer_info_Input2_signIn_btn);
         signInBtn.setOnClickListener(onClickListener);
+
+        Button nickNameBtn = (Button) findViewById(R.id.nanumer_info_input_nick_certify_btn);
+        nickNameBtn.setOnClickListener(onClickListener);
 
     }
 }

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.location.Geocoder;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,18 +14,23 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.MapView;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.overlay.InfoWindow;
 import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.overlay.Overlay;
+import com.naver.maps.map.overlay.OverlayImage;
 import com.naver.maps.map.util.FusedLocationSource;
-
+import com.naver.maps.map.OnMapReadyCallback;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -34,7 +40,9 @@ import java.util.Vector;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements OnMapReadyCallback {
+
+    Marker marker;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,8 +59,12 @@ public class HomeFragment extends Fragment {
             Manifest.permission.ACCESS_COARSE_LOCATION
     };
 
+    private Marker marker1 = new Marker();
+    private Marker marker2 = new Marker();
+    private Marker marker3 = new Marker();
+
     private FusedLocationSource mLocationSource;
-    private NaverMap mNaverMap;
+    private NaverMap naverMap;
     private MapView mapView;
     private Geocoder geocoder;
     String token;
@@ -80,6 +92,7 @@ public class HomeFragment extends Fragment {
 
     public HomeFragment() {
         // Required empty public constructor
+
     }
 
     /**
@@ -107,6 +120,7 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
 
          Intent mainIntent = getActivity().getIntent();
          token = mainIntent.getExtras().getString("access_token");
@@ -141,11 +155,62 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = (ViewGroup) inflater.inflate(R.layout.fragment_home, container, false);
 
+        Button btnMark1 = (Button) rootView.findViewById(R.id.btnmark1);
+        Button btnMark2 = (Button) rootView.findViewById(R.id.btnmark2);
+        Button btnMark3 = (Button) rootView.findViewById(R.id.btnmark3);
+        ImageView marker = (ImageView) rootView.findViewById(R.id.marker);
 
         // 지도 객체 생성
         mapView = (MapView) rootView.findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
 
+        marker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MapStoreDetailActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnMark1.setOnClickListener(new Button.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                setMarker(marker1, 33.2712, 126.5354, R.drawable.marker, 0);
+
+                marker1.setOnClickListener(new Overlay.OnClickListener() {
+                    @Override
+                    public boolean onClick(@NonNull Overlay overlay)
+                    {
+                        Intent intent = new Intent(getActivity(), MapStoreDetailActivity.class);
+                        startActivity(intent);
+                        return false;
+                    }
+                });
+            }
+        });
+
+        btnMark2.setOnClickListener(new Button.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                setMarker(marker2, 33.49957, 126.531076, R.drawable.marker, 10);
+            }
+        });
+
+        btnMark3.setOnClickListener(new Button.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                setMarker(marker3, 33.49957, 126.531128, R.drawable.marker, 0);
+            }
+        });
+;
+        mapView.onResume();
+        mapView.getMapAsync(this);
 
         // getMapAsync를 호출하여 비동기로 onMapReady 콜백 메서드 호출
         // onMapReady에서 NaverMap 객체를 받음
@@ -207,5 +272,40 @@ public class HomeFragment extends Fragment {
         Call<PortfolioListResponse> portfolioListCall = RetrofitClient.getAPIService().getHotPortfolio(token); */
 
         return rootView;
+    }
+
+    private void setMarker(Marker marker,  double lat, double lng, int resourceID, int zIndex)
+    {
+        //원근감 표시
+        marker.setIconPerspectiveEnabled(true);
+        //아이콘 지정
+        marker.setIcon(OverlayImage.fromResource(resourceID));
+        //마커의 투명도
+        marker.setAlpha(0.8f);
+        //마커 위치
+        marker.setPosition(new LatLng(lat, lng));
+        //마커 우선순위
+        marker.setZIndex(zIndex);
+        //마커 표시
+        marker.setMap(naverMap);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState)
+    {
+        super.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onLowMemory()
+    {
+        super.onLowMemory();
+        mapView.onLowMemory();
+    }
+
+    @Override
+    public void onMapReady(@NonNull NaverMap naverMap) {
+
     }
 }
