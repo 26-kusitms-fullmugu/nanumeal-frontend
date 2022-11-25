@@ -83,7 +83,7 @@
             <EditText
                 android:text="nanumeal"
                 android:id="@+id/nanumer_info_input_id_et"
-                android:layout_width="265dp"
+                android:layout_width="248dp"
                 android:layout_height="35dp"
                 android:paddingStart="15dp"
                 android:hint="아이디"
@@ -97,8 +97,8 @@
 
             <Button
                 android:id="@+id/nanumer_info_input_id_certify_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="104dp"
+                android:layout_height="35dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="중복확인"
@@ -164,6 +164,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/email_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -228,20 +229,76 @@
 
         <Button
             android:id="@+id/nanumer_info_input_email_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="330dp"
+            android:layout_height="41dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/btn_nanumer_info_input_email"
-            android:text="이메일 인증하기"
+            android:text="이메일 인증번호 받기"
             android:textSize="13sp"
             android:fontFamily="@font/roboto_bold"
-            android:textColor="@color/font_gray"/>
-
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인증번호 확인"
+            android:textColor="@color/font_black"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:text=""
+                android:layout_width="243dp"
+                android:layout_height="35dp"
+                android:paddingStart="15dp"
+                android:hint="인증번호를 입력해주세요."
+                android:maxLines="1"
+                android:maxLength="15"
+                android:inputType="text"
+                android:background="@drawable/btn_nanumer_info_input"
+                android:textSize="13sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/font_gray"/>
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="확인"
+                android:textSize="13sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_info_input_id_certify"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

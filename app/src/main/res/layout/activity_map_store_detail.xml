@@ -128,6 +128,29 @@
                         </LinearLayout>
 
                     </FrameLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/cha_icon1"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="510dp"
+                        android:layout_marginLeft="299dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/cha_icon_2"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="629dp"
+                        android:layout_marginLeft="33dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/cha_icon_3"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="726dp"
+                        android:layout_marginLeft="299dp"/>
                 </FrameLayout>
 
             </LinearLayout>
